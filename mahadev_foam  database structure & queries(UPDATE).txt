@@ -1,0 +1,214 @@
+create database mahadev_foam;
+use mahadev_foam;
+
+
+create table region_list(
+region varchar(30) primary key);
+
+insert into region_list values('varacha');
+insert into region_list values('piplod');
+insert into region_list values('dumas');
+insert into region_list values('bhatar');
+insert into region_list values('katargam');
+
+
+
+create table dealer_group(
+delergroup varchar(25) primary key);
+refresh deler
+
+insert into dealer_group values('sanghani group');
+insert into dealer_group values('shruti group');
+insert into dealer_group values('sunny group');
+insert into dealer_group values('new way group');
+insert into dealer_group values('mordern group');
+
+
+
+create table login(
+userid varchar(15) primary key,
+password varchar(30));
+
+insert into login values('viraj4699','8469904699');
+insert into login values('ketan4699','9825118350');
+insert into login values('nandit6676','9727255447');			
+
+
+
+create table company_list(
+cid int(4) primary key,
+cname varchar(20) not null);
+
+insert into company_list values('1','refresh mattress');
+insert into company_list values('2','sleepwell mattress');
+insert into company_list values('3','reliance mattress');
+insert into company_list values('4','godrage mattress');
+insert into company_list values('5','rupa mattress');
+insert into company_list values('6','super mattress');
+
+						
+
+create table product(
+pid int(4) primary key,
+pname varchar(20) not null,
+cid int(4) not null,
+price_72_36 int(6) not null,
+purchase_price_72_36 int(6) not null);
+
+insert into product values('1','Oxyfresh','1','9660','5000');
+insert into product values('2','backorest','3','8520','5000');
+insert into product values('3','oxyback','2','7500','6000');
+insert into product values('4','sweetdreams','4','9520','6500');
+insert into product values('5','freshorest','5','8756','5000');
+insert into product values('6','superspecial','6','8999','6500');
+
+
+
+
+create table customer_details(
+cus_id int(4) primary key,
+cus_name varchar(35) not null,
+cus_phone varchar(13),
+cus_address varchar(100),
+cus_region  varchar(30),
+foreign key(cus_region) references region_list(region) on delete cascade on update cascade
+);
+
+insert into customer_details values('1','ramesh','9909090600','B-38 kehsav park soc','katargam');
+insert into customer_details values('2','suresh','9825143342','A-12 brabhunagar','varacha');
+insert into customer_details values('3','raju','9905462121','12 santlal soc','varacha');
+insert into customer_details values('4','nilam','982516655','1 shreeji soc','piplod');
+insert into customer_details values('5','disha','9727266553','D-109 sanskrut appartment','bhatar');
+insert into customer_details values('6','ramjii','7932144551','B-801 hariom chamber','dumas');
+
+create table dealer_details(
+dealer_id int(4) primary key,
+firm_name varchar(500) not null,
+contact_person_name varchar(50) not null,
+dealer_contact_number varchar(10) not null,
+dealer_address varchar(200) not null,
+deal_group varchar(30) not null,
+deal_region varchar(30) not null,
+dealer_tincst varchar(20) unique key,
+dealer_tingst varchar(20) unique key,
+foreign key(deal_group) references dealer_group(delergroup) on delete cascade on update cascade,
+foreign key(deal_region) references region_list(region) on delete cascade on update cascade
+);
+
+insert into dealer_details values('1','saheb krupa','sagar','9845632155','33 narayana nagar','shruti group','dumas','9909090600','9644553344');
+insert into dealer_details values('2','maheshwari stores','heet','9612345565','lakshmi residency','sanghani group','bhatar','9825454562','9966445237');
+insert into dealer_details values('3','amarnath stores 1','ramesh','9963214587','12 valabh nagar soc','new way group','varacha','8866334421','9647532158');
+insert into dealer_details values('4','jay bhavani stores','pranjal','9723646854','A-12 gandhi nivas banglows','mordern group','piplod','9727255663','9723456841');
+insert into dealer_details values('5','luxuria','meet','7356412589','C-101 adarsh complex','sunny group','katargam','7923456512','9945712365');
+insert into dealer_details values('6','super comfort','dhruv','7985461234','66 valabh nagar soc','new way group','varacha','9903511224','7963214568');
+insert into dealer_details values('7','amartnath stores 2','heet','9956412375','88 ashanagar nivas','sanghani','piplod','9825454562','9647512384');
+
+create table bills_RETAILS(
+invoice_date date not null,
+invoice_id int(5) not null,
+cus_id int(4) not null,
+cus_name varchar(35) not null,
+comp_name varchar(20) not null,
+product_name varchar(20) not null,
+length int(3) not null,
+width int(3) not null,
+height_MM int (4) not null,
+rate int(6) not null,
+quantity int(5) not null,
+total int(10) not null,
+discount_perc decimal(4,2) not null,
+net_amt int(10) not null
+);
+
+insert into bills_RETAILS values('2006-06-21','1','1','ramesh','godrage mattress','sweetdreams','170','40','12','9520','4','38080','10','34272');
+insert into bills_RETAILS values('2007-11-12','1','1','ramesh','sleepwell mattress','oxyfresh','156','55','11','9660','2','19320','15','16422');
+insert into bills_RETAILS values('2007-06-06','2','3','raju','','rupa mattress','freshorest','180','60','10','8756','3','26268','12','23116');
+insert into bills_RETAILS values('2007-05-14','3','4','nilam','super mattress','superspecial','175','55','15','8999','6','53994','10','48594');
+insert into bills_RETAILS values('2006-02-16','4','5','disha','sleepwell mattress','oxyfresh','166','53','20','9660','5','48300','6','45402');
+insert into bills_RETAILS values('2007-12-25','5','6','ramjii','reliance mattress','backforest','156','57','15','8520','4','34080','18','32186');
+
+create table bills_wholesale(
+invoice_date date not null,
+invoice_id int(5) not null,
+dealer_id int(4) not null,
+firm_name varchar(35) not null,
+comp_name varchar(20) not null,
+product_name varchar(20) not null,
+length int(3) not null,
+width int(3) not null,
+height_MM int (4) not null,
+rate int(6) not null,
+quantity int(5) not null,
+total int(10) not null,
+discount_perc decimal(4,2) not null,
+net_amt int(10) not null
+);
+
+insert into bills_wholesale values('2006-06-21','1','2','maheshwari stores','godrage mattress','sweetdreams','170','40','12','9520','4','38080','10','34272');
+insert into bills_wholesale values('2007-11-12','1','2','maheshwari stores','sleepwell mattress','oxyfresh','156','55','11','9660','2','19320','15','16422');
+insert into bills_wholesale values('2007-06-06','2','1','saheb krupa','rupa mattress','freshorest','180','60','10','8756','3','26268','12','23116');
+insert into bills_wholesale values('2007-05-14','3','4','jay bhavani stores','super mattress','superspecial','175','55','15','8999','6','53994','10','48594');
+insert into bills_wholesale values('2006-02-16','4','6','super comfort','sleepwell mattress','oxyfresh','166','53','20','9660','5','48300','6','45402');
+insert into bills_wholesale values('2007-12-25','5','4','jay bhavani stores','reliance mattress','backforest','156','57','15','8520','4','34080','18','32186');
+
+create table payments_retail(
+Invoice_id int(4) primary key,
+Netamt int(7) not null,
+recdamt int(8) not null,
+balanceamt int(7) not null);
+
+insert into payments_retail values('1','50694','20000','30694');
+insert into payments_retail values('2','23116','13116','10000');
+insert into payments_retail values('3','48594','28000','20594');
+insert into payments_retail values('4','45402','40000','5402');
+insert into payments_retail values('5','32186','12186','20000');
+
+create table payments_wholesale(
+Invoice_id int(4) primary key,
+Netamt int(7) not null,
+recdamt int(8) not null,
+balanceamt int(7) not null);
+
+insert into payments_wholesale values('1','50694','20000','30694');
+insert into payments_wholesale values('2','23116','13116','10000');
+insert into payments_wholesale values('3','48594','28000','20594');
+insert into payments_wholesale values('4','45402','40000','5402');
+insert into payments_wholesale values('5','32186','12186','20000');
+
+create table stock(
+invoice_date date,
+invoiceid int(4) not null,
+vendorid int(4) not null,
+vendorname varchar(30) not null,
+company varchar(50) not null,	
+product_name varchar(20) not null,
+length int(3) not null,
+width int(3) not null,
+height_MM int (4) not null,
+purch_price int(7),
+rate int(6) not null,
+quant int(7) not null,
+netamt int(10) not null,
+upi int(5) primary key,
+godown varchar(20)
+);
+
+create table godown(
+region varchar(30) primary key);
+
+insert into godown values('bhatar office');
+insert into godown values('tenement');
+insert into godown values('manju dyeing');
+insert into godown values('uma society');
+insert into godown values('vesu office');
+
+create table tasks(
+taskid int(4) primary key,
+cus_id int(7),
+invoice_id int(8),
+name varchar(60),
+phone varchar(10),
+task varchar(100) not null);
+
+
+          
