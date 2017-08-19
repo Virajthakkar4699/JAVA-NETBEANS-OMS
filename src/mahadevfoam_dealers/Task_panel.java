@@ -173,7 +173,7 @@ public class Task_panel extends javax.swing.JFrame {
             }
             if(jrbcustomer.isSelected())
             {
-             String pnd_task="select * from tasks where status='N';";
+             String pnd_task="select * from tasks where status='N'and name!='mahadev foam';";
              ResultSet rs=stmt.executeQuery(pnd_task);
              DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
              int rows=model.getRowCount();
