@@ -999,7 +999,7 @@ dispose();
     }//GEN-LAST:event_JinvoicenumberFocusGained
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-       new office_management_menu().setVisible(true);
+       new office_management_menu1().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 

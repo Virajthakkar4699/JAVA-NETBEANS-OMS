@@ -152,7 +152,7 @@ public class mahadev_menu_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jdealernuttonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new office_management_menu().setVisible(true);
+        new office_management_menu1().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
