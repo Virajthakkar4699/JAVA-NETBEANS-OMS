@@ -208,7 +208,8 @@ cus_id int(7),
 invoice_id int(8),
 name varchar(60),
 phone varchar(10),
-task varchar(100) not null);
+task varchar(100) not null,
+status char(1));
 
 
           
