@@ -71,8 +71,6 @@ public class bills extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jlbdis = new javax.swing.JLabel();
         jbt_save = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jtflength = new javax.swing.JTextField();
         jtfwidth = new javax.swing.JTextField();
         jtfheight = new javax.swing.JTextField();
@@ -221,15 +219,6 @@ public class bills extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("DELETE");
-
-        jButton5.setText("VIEW");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
         jtfheight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfheightActionPerformed(evt);
@@ -363,7 +352,7 @@ public class bills extends javax.swing.JFrame {
 
         jLabel23.setText("Total");
 
-        jButton4.setText("jButton4");
+        jButton4.setText("Add to collection list");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -433,10 +422,6 @@ public class bills extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
                                 .addComponent(jbt_save)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton7))
                             .addGroup(layout.createSequentialGroup()
@@ -656,8 +641,6 @@ public class bills extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jbt_save)
-                            .addComponent(jButton3)
-                            .addComponent(jButton5)
                             .addComponent(jButton7))
                         .addGap(22, 22, 22))))
         );
@@ -999,7 +982,7 @@ dispose();
     }//GEN-LAST:event_JinvoicenumberFocusGained
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-       new office_management_menu1().setVisible(true);
+       new mahadev_menu_page().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -1082,10 +1065,6 @@ dispose();
     private void jtfheightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfheightActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfheightActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jtfheightFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfheightFocusLost
         
@@ -1198,9 +1177,7 @@ dispose();
     private javax.swing.JTextField Jinvoicenumberbill;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

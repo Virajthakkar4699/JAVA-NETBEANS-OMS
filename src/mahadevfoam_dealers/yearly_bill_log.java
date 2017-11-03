@@ -106,7 +106,7 @@ public class yearly_bill_log extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new office_management_menu1().setVisible(true);
+        new mahadev_menu_page().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

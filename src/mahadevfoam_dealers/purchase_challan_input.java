@@ -738,7 +738,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfnetamtFocusGained
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        new office_management_menu1().setVisible(true);
+        new mahadev_menu_page().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
