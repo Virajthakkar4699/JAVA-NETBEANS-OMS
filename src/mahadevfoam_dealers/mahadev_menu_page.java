@@ -55,6 +55,7 @@ public class mahadev_menu_page extends javax.swing.JFrame {
         jMenuItem12 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu Page");
 
         jButton2.setText("Logout");
         jButton2.addActionListener(new java.awt.event.ActionListener() {

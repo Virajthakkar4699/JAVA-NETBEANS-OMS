@@ -201,15 +201,12 @@ insert into godown values('tenement');
 insert into godown values('manju dyeing');
 insert into godown values('uma society');
 insert into godown values('vesu office');
-
-create table tasks(
-taskid int(4) primary key,
-cus_id int(7),
-invoice_id int(8),
-name varchar(60),
-phone varchar(10),
-task varchar(100) not null,
-status char(1));
-
-
           
+create table vendor_details(
+vendor_id int(4) primary key,
+firm_name varchar(500) not null,
+contact_person_name varchar(50) not null,
+vendor_contact_number varchar(10) not null,
+vendor_address varchar(200) not null,
+vendor_tincst varchar(20) unique key,
+vendor_tingst varchar(20) unique key);

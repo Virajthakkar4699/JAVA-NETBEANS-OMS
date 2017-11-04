@@ -5,6 +5,13 @@
  */
 package mahadevfoam_dealers;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Mahadav
@@ -29,7 +36,7 @@ public class Godown_management extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jtfgod = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
@@ -73,7 +80,7 @@ public class Godown_management extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfgod, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addComponent(jButton1))
@@ -93,7 +100,7 @@ public class Godown_management extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtfgod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 39, 39)
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -109,7 +116,41 @@ public class Godown_management extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+        try 
+        {
+            Class.forName("java.sql.Driver");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
+            Statement stmt=conn.createStatement();
+            String godown=jtfgod.getText();
+            String sqlinsert = "INSERT INTO godown VALUES('"+godown+"');";
+            stmt.executeUpdate(sqlinsert);
+            JOptionPane.showMessageDialog(this, "New Godown Entered..!");
+            jtfgod.setText(null);
+            
+            
+            
+            String sql="select * from godown;";
+    ResultSet rs=stmt.executeQuery(sql);
+    int rows=model.getRowCount();
+    if(rows>0)
+    {
+        for(int i=0;i<rows;i++)
+        {
+            model.removeRow(0);
+        }          
+    }
+    while(rs.next())
+    {
+        model.addRow(new Object[]{rs.getString(1)});   
+    }
+    
+                
+        }
+        catch (Exception e) 
+        {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -153,6 +194,6 @@ public class Godown_management extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jtfgod;
     // End of variables declaration//GEN-END:variables
 }

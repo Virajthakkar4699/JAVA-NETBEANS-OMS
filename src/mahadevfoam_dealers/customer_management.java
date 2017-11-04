@@ -290,6 +290,25 @@ try {
             
             JOptionPane.showMessageDialog(this,"customer details updated  Sucessfully...");
             
+            DefaultTableModel model=(DefaultTableModel)jcustable.getModel();
+
+                     String sqlview="select * from customer_details;";
+
+                     ResultSet rs=stmt.executeQuery(sqlview);
+
+                int rows=model.getRowCount();
+                if(rows>0)
+                    {
+                        for (int i=0;i<rows;i++)
+                        {
+                            model.removeRow(0);
+                        }
+                    }
+                    while(rs.next())
+                    {
+                        model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)});
+                    }
+            
             } 
         catch (Exception e) 
         {
