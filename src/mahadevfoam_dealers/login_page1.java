@@ -13,7 +13,7 @@ import javax.swing.*;
  * @author SAGAR
  */
 public class login_page1 extends javax.swing.JFrame {
-     String userid=null;
+     
     /**
      * Creates new form login_page1
      */
@@ -192,7 +192,7 @@ public class login_page1 extends javax.swing.JFrame {
          String passwordfromuser =jpassfromuser.getText();
          String sql = "SELECT * FROM login where userid='"+useridfromuser+"';";
          ResultSet rs = stmt.executeQuery(sql);
-         userid=useridfromuser;
+         
          
          
          

@@ -6,10 +6,12 @@ package mahadevfoam_dealers;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.sql.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -62,6 +64,8 @@ public class cash_mgmt extends javax.swing.JFrame {
         jSpinner1 = new javax.swing.JSpinner();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jSpinner2 = new javax.swing.JSpinner();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -149,6 +153,21 @@ public class cash_mgmt extends javax.swing.JFrame {
             }
         });
 
+        jSpinner2.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(987903480000L), new java.util.Date(987903480000L), new java.util.Date(2029282680000L), java.util.Calendar.MONTH));
+        jSpinner2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinner2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner2StateChanged(evt);
+            }
+        });
+
+        jButton3.setText("View Record Date wise");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -166,12 +185,17 @@ public class cash_mgmt extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(credt)
@@ -192,27 +216,32 @@ public class cash_mgmt extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(68, 68, 68)
                                 .addComponent(jButton1)))
-                        .addContainerGap(87, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(101, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2)
-                        .addGap(46, 46, 46))))
+                        .addGap(54, 54, 54))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 54, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
@@ -239,7 +268,7 @@ public class cash_mgmt extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addGap(39, 39, 39))
+                .addGap(65, 65, 65))
         );
 
         pack();
@@ -287,6 +316,10 @@ public class cash_mgmt extends javax.swing.JFrame {
     }//GEN-LAST:event_DebitActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        DefaultTableModel model1=(DefaultTableModel)jTable1.getModel();
+        DefaultTableModel model2=(DefaultTableModel)jTable2.getModel();
+        
         String id=jid.getText();
         String amount=jamount.getText();
         String reference=jrefer.getText();
@@ -302,6 +335,21 @@ public class cash_mgmt extends javax.swing.JFrame {
                 stmt.executeUpdate(sqlinsert);
                 JOptionPane.showMessageDialog(this, "Record saved..!");
                 
+                String sqlretail="select * from cash_cr where date='"+date+"';";
+    ResultSet rs=stmt.executeQuery(sqlretail);
+    int rows=model1.getRowCount();
+    if(rows>0)
+    {
+        for(int i=0;i<rows;i++)
+        {
+            model1.removeRow(0);
+        }          
+    }
+    while(rs.next())
+    {
+        model1.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});   
+    }
+                
             }
             if(Debit.isSelected())
             {
@@ -309,6 +357,21 @@ public class cash_mgmt extends javax.swing.JFrame {
                 stmt.executeUpdate(sqlinsert);
                 JOptionPane.showMessageDialog(this, "Record saved..!");
             }    
+            
+            String sqlretail="select * from cash_de where date='"+date+"';";
+    ResultSet rs=stmt.executeQuery(sqlretail);
+    int rows=model2.getRowCount();
+    if(rows>0)
+    {
+        for(int i=0;i<rows;i++)
+        {
+            model2.removeRow(0);
+        }          
+    }
+    while(rs.next())
+    {
+        model2.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});   
+    }
         } 
         catch (Exception e) 
         {
@@ -329,6 +392,58 @@ public class cash_mgmt extends javax.swing.JFrame {
         new mahadev_menu_page().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jSpinner2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner2StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner2StateChanged
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        DefaultTableModel model1=(DefaultTableModel)jTable1.getModel();
+        DefaultTableModel model2=(DefaultTableModel)jTable2.getModel();
+        String date=(new SimpleDateFormat("yyyy-MM-dd").format(jSpinner2.getValue()));
+        
+try{
+    
+    Class.forName("java.sql.Driver");
+    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
+    Statement stmt=conn.createStatement();
+                
+    String sqlcredit="select * from cash_cr where date='"+date+"';";
+    ResultSet rs=stmt.executeQuery(sqlcredit);
+    int rows=model1.getRowCount();
+    if(rows>0)
+    {
+        for(int i=0;i<rows;i++)
+        {
+            model1.removeRow(0);
+        }          
+    }
+    while(rs.next())
+    {
+        model1.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});   
+    }
+    
+    String sqldebit="select * from cash_de where date='"+date+"';";
+    ResultSet rs1=stmt.executeQuery(sqldebit);
+    int rows1=model2.getRowCount();
+    if(rows1>0)
+    {
+        for(int i=0;i<rows1;i++)
+        {
+            model2.removeRow(0);
+        }          
+    }
+    while(rs1.next())
+    {
+        model2.addRow(new Object[]{rs1.getString(1),rs1.getString(2),rs1.getString(3),rs1.getString(4)});  
+    }
+    }
+
+  catch(Exception e)
+ {
+        JOptionPane.showMessageDialog(this, e.getMessage()); 
+ }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -370,6 +485,7 @@ public class cash_mgmt extends javax.swing.JFrame {
     private javax.swing.JRadioButton credt;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -380,6 +496,7 @@ public class cash_mgmt extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jamount;

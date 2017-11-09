@@ -210,3 +210,31 @@ vendor_contact_number varchar(10) not null,
 vendor_address varchar(200) not null,
 vendor_tincst varchar(20) unique key,
 vendor_tingst varchar(20) unique key);
+
+create table cash_cr(
+id int(4) primary key,
+Amount int(7) not null,
+Account_of varchar(50) not null,
+Date date not null);
+
+create table cash_de(
+id int(4) primary key,
+Amount int(7) not null,
+Account_of varchar(50) not null,
+Date date not null);
+
+create table tasks(
+taskid int(4) primary key,
+cus_id int(7),
+invoice_id int(8),
+name varchar(60),
+phone varchar(10),
+task varchar(100) not null,
+status char(1));
+
+
+
+
+
+
+

@@ -66,7 +66,6 @@ public class customer_management extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jcomboregion = new javax.swing.JComboBox();
         jrbtable = new javax.swing.JRadioButton();
-        jrbregionwise = new javax.swing.JRadioButton();
         jrbfield = new javax.swing.JRadioButton();
         jrbsearch = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
@@ -75,6 +74,7 @@ public class customer_management extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jrbregionwise = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customer Management");
@@ -112,9 +112,6 @@ public class customer_management extends javax.swing.JFrame {
 
         buttonGroup1.add(jrbtable);
         jrbtable.setText("View in Table");
-
-        buttonGroup1.add(jrbregionwise);
-        jrbregionwise.setText("View Region Wise");
 
         buttonGroup1.add(jrbfield);
         jrbfield.setText("View in Fields");
@@ -164,6 +161,9 @@ public class customer_management extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jrbregionwise);
+        jrbregionwise.setText("View Region Wise");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -195,7 +195,6 @@ public class customer_management extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jrbregionwise)
                             .addComponent(jrbtable)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,7 +211,8 @@ public class customer_management extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton6)))))
+                                .addComponent(jButton6))
+                            .addComponent(jrbregionwise))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
@@ -253,17 +253,17 @@ public class customer_management extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jrbtable)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jrbfield)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jrbsearch)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jrbregionwise))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1)
-                                .addGap(16, 16, 16)))
-                        .addComponent(jrbregionwise)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                                .addGap(39, 39, 39)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -342,7 +342,7 @@ new mahadev_menu_page().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
- if(jrbtable.isSelected())
+        if(jrbtable.isSelected())
         {
             try{
                     DefaultTableModel model=(DefaultTableModel)jcustable.getModel();
@@ -377,8 +377,7 @@ new mahadev_menu_page().setVisible(true);
                     }
         if (jrbfield.isSelected())
         {
-                        try {
-                    DefaultTableModel model=(DefaultTableModel)jcustable.getModel();
+                     try {
                     Class.forName("java.sql.Driver");
                     Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
                     Statement stmt=conn.createStatement();
@@ -430,10 +429,12 @@ new mahadev_menu_page().setVisible(true);
         catch (Exception e) 
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
+        }       
         }
         if (jrbregionwise.isSelected())
         {
-            try 
+            
+                        try 
                         {
                         DefaultTableModel model=(DefaultTableModel)jcustable.getModel();
                         Class.forName("java.sql.Driver");
@@ -445,27 +446,25 @@ new mahadev_menu_page().setVisible(true);
                         ResultSet rs = stmt.executeQuery(sql);
 
                         int rows=model.getRowCount();
-                    if(rows>0)
-                    {
-                        for (int i=0;i<rows;i++)
+                        if(rows>0)
                         {
-                            model.removeRow(0);
-                        }
-
+                            for (int i=0;i<rows;i++)
+                            {
+                                model.removeRow(0);
+                            }
+                        }  
                             while(rs.next())
                             {
                                 model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)});
                             }
 
-                    }
-
-                        } 
+                        }                      
                         catch (Exception e)
                         {
                             JOptionPane.showMessageDialog(this, e.getMessage());
                         }
-                        }
-        }       
+           }
+               
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -52,10 +52,7 @@ public class yearly_bill_log extends javax.swing.JFrame {
 
         jtablelog.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "Invoice ID", "Date", "Customer ID", "Name", "Contact Numberl", "Net Amount"

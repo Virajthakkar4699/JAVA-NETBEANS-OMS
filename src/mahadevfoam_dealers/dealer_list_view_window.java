@@ -79,10 +79,7 @@ public class dealer_list_view_window extends javax.swing.JFrame {
 
         jdealertable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Dealer_Id", "Firm name", "Contact person", "Phone number", "Address"

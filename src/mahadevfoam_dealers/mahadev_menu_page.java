@@ -10,7 +10,7 @@ package mahadevfoam_dealers;
  * @author Mahadav
  */
 public class mahadev_menu_page extends javax.swing.JFrame {
-    static String userid=null;
+   
 
     /**
      * Creates new form mahadev_menu_page
@@ -20,9 +20,7 @@ public class mahadev_menu_page extends javax.swing.JFrame {
     public mahadev_menu_page() {
         initComponents();
        
-        if(userid==null)
-            new login_page1().setVisible(true);
-            //new mahadev_menu_page().setVisible(false);           
+                  
     }
     
     /**

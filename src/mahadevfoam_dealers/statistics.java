@@ -4,6 +4,13 @@
  */
 package mahadevfoam_dealers;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Student
@@ -39,6 +46,7 @@ public class statistics extends javax.swing.JFrame {
         jTable8 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -96,6 +104,13 @@ public class statistics extends javax.swing.JFrame {
 
         jLabel2.setText("Yearly Profit");
 
+        jButton4.setText("back");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -121,7 +136,10 @@ public class statistics extends javax.swing.JFrame {
                                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -144,20 +162,27 @@ public class statistics extends javax.swing.JFrame {
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton4))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Basic Statics", jPanel1);
 
         jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Highest Selling Product", "Region"
+                "Highest Selling Product", "Amount"
             }
         ));
         jScrollPane5.setViewportView(jTable5);
@@ -167,7 +192,7 @@ public class statistics extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Highest Selling Product", "Region"
+                "Highest Selling Product", "Amount"
             }
         ));
         jScrollPane7.setViewportView(jTable7);
@@ -239,6 +264,11 @@ public class statistics extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jTable4);
 
         jButton3.setText("jButton2");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -284,8 +314,139 @@ public class statistics extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
+             try{
+                    DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+                  
+
+                    Class.forName("java.sql.Driver");
+                    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
+                    Statement stmt=conn.createStatement();
+
+                     String sql="select r.product_name,(sum(r.net_amt)+sum(w.net_amt)) from bills_retails r, bills_wholesale w where r.product_name=w.product_name group by r.product_name;";
+
+                     ResultSet rs=stmt.executeQuery(sql);
+
+                int rows=model.getRowCount();
+                if(rows>0)
+                    {
+                        for (int i=0;i<rows;i++)
+                        {
+                            model.removeRow(0);
+                        }
+                    }
+                    while(rs.next())
+                    {
+                        model.addRow(new Object[]{rs.getString(1),rs.getString(2)});
+                    }
+                    /////
+                    String sql2="SELECT PNAME,(PRICE_72_36-PURCHASE_PRICE_72_36) FROM PRODUCT;";
+
+                     ResultSet rs2=stmt.executeQuery(sql2);     
+                DefaultTableModel model2=(DefaultTableModel)jTable6.getModel();
+                int rows1=model2.getRowCount();
+                if(rows1>0)
+                    {
+                        for (int i=0;i<rows1;i++)
+                        {
+                            model2.removeRow(0);
+                        }
+                    }
+                    while(rs2.next())
+                    {
+                        model2.addRow(new Object[]{rs2.getString(1),rs2.getString(2)});
+                    }
+
+
+                }    
+                catch(Exception e)
+                {
+                        JOptionPane.showMessageDialog(this, e.getMessage()); 
+                }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //select product_name, sum(net_amt) from bills_retails group by product_name;  retail
+        //select product_name, sum(net_amt) from bills_wholesale group by product_name;  whoolesale
+        DefaultTableModel model1=(DefaultTableModel)jTable7.getModel();
+        DefaultTableModel model2=(DefaultTableModel)jTable5.getModel();
+try{
+    
+    Class.forName("java.sql.Driver");
+    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
+    Statement stmt=conn.createStatement();
+                
+    String sqlretail="select product_name, sum(net_amt) from bills_retails group by product_name;";
+    ResultSet rs=stmt.executeQuery(sqlretail);
+    int rows=model1.getRowCount();
+    if(rows>0)
+    {
+        for(int i=0;i<rows;i++)
+        {
+            model1.removeRow(0);
+        }          
+    }
+    while(rs.next())
+    {
+        model1.addRow(new Object[]{rs.getString(1),rs.getString(2)});   
+    }
+    
+    String sqlwholsale="select product_name, sum(net_amt) from bills_wholesale group by product_name;";
+    ResultSet rs1=stmt.executeQuery(sqlwholsale);
+       int rows1=model2.getRowCount();
+    if(rows1>0)
+    {
+        for(int i=0;i<rows1;i++)
+        {
+            model2.removeRow(0);
+        }          
+    }
+    while(rs1.next())
+    {
+        model2.addRow(new Object[]{rs1.getString(1),rs1.getString(2)});   
+    }
+    }
+
+  catch(Exception e)
+ {
+        JOptionPane.showMessageDialog(this, e.getMessage()); 
+ }    
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // 
+        DefaultTableModel model1=(DefaultTableModel)jTable4.getModel();
+        try 
+        {
+    Class.forName("java.sql.Driver");
+    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
+    Statement stmt=conn.createStatement();
+                
+    String sqlretail="select b.firm_name, sum(net_amt), deal_region from dealer_details d, bills_wholesale b where d.dealer_id=b.dealer_id group by b.firm_name;";
+    ResultSet rs=stmt.executeQuery(sqlretail);
+    int rows=model1.getRowCount();
+    if(rows>0)
+    {
+        for(int i=0;i<rows;i++)
+        {
+            model1.removeRow(0);
+        }          
+    }
+    while(rs.next())
+    {
+        model1.addRow(new Object[]{rs.getString(1),rs.getString(2)});   
+    }
+        }
+        catch (Exception e) 
+        {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        new mahadev_menu_page().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -325,6 +486,7 @@ public class statistics extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
