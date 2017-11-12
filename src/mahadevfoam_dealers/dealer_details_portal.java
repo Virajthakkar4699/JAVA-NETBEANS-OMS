@@ -83,6 +83,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Dealer Modification");
 
         jLabel8.setText("TIN CST:-");
 

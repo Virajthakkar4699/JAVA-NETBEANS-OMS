@@ -47,6 +47,7 @@ public class Task_panel extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Task Panel");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

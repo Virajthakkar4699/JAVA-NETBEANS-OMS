@@ -68,6 +68,7 @@ public class cash_mgmt extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Manage your Cash");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
