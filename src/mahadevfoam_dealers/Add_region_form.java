@@ -44,38 +44,25 @@ public class Add_region_form extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        addregionbutton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jTfaddregion = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        backbutton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jregiontable = new javax.swing.JTable();
-        viewallbutton = new javax.swing.JButton();
         searchbutton = new javax.swing.JButton();
+        viewallbutton = new javax.swing.JButton();
+        backbutton = new javax.swing.JButton();
+        addregionbutton = new javax.swing.JButton();
+        jTfaddregion = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jSeparator7 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Region update");
+        getContentPane().setLayout(null);
 
-        addregionbutton.setText("Add Region");
-        addregionbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addregionbuttonActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Enter Region:-");
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("Region Update");
-
-        backbutton.setText("Back");
-        backbutton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        backbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backbuttonActionPerformed(evt);
-            }
-        });
+        jPanel1.setBackground(new java.awt.Color(36, 47, 65));
+        jPanel1.setLayout(null);
 
         jregiontable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,12 +82,8 @@ public class Add_region_form extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jregiontable);
 
-        viewallbutton.setText("View All");
-        viewallbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewallbuttonActionPerformed(evt);
-            }
-        });
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(330, 90, 170, 190);
 
         searchbutton.setText("Search");
         searchbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -108,59 +91,63 @@ public class Add_region_form extends javax.swing.JFrame {
                 searchbuttonActionPerformed(evt);
             }
         });
+        jPanel1.add(searchbutton);
+        searchbutton.setBounds(210, 250, 90, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(21, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(viewallbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(addregionbutton))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(searchbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfaddregion, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTfaddregion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addregionbutton)
-                    .addComponent(backbutton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(viewallbutton)
-                    .addComponent(searchbutton))
-                .addContainerGap(50, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
-        );
+        viewallbutton.setText("View All");
+        viewallbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewallbuttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(viewallbutton);
+        viewallbutton.setBounds(50, 250, 100, 30);
+
+        backbutton.setText("Back");
+        backbutton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        backbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backbuttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backbutton);
+        backbutton.setBounds(210, 200, 90, 30);
+
+        addregionbutton.setText("Add Region");
+        addregionbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addregionbuttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(addregionbutton);
+        addregionbutton.setBounds(50, 200, 100, 30);
+        jPanel1.add(jTfaddregion);
+        jTfaddregion.setBounds(160, 150, 140, 30);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Enter Region:-");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(50, 150, 100, 24);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Region Update");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(110, 80, 132, 41);
+
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("MAHADEV FOAM AND FURNISHING");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(75, 11, 410, 50);
+
+        jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator7);
+        jSeparator7.setBounds(40, 130, 270, 2);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 520, 320);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -298,7 +285,10 @@ public class Add_region_form extends javax.swing.JFrame {
     private javax.swing.JButton backbutton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTextField jTfaddregion;
     private javax.swing.JTable jregiontable;
     private javax.swing.JButton searchbutton;
