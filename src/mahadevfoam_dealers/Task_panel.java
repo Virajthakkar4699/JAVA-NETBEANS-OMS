@@ -47,12 +47,13 @@ public class Task_panel extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Task Panel");
+        setPreferredSize(new java.awt.Dimension(710, 460));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
@@ -71,8 +72,9 @@ public class Task_panel extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(230, 140, 460, 250);
+        jScrollPane1.setBounds(220, 140, 460, 250);
 
+        jButton2.setBackground(new java.awt.Color(97, 212, 195));
         jButton2.setText("Set as done");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +82,7 @@ public class Task_panel extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(40, 370, 140, 23);
+        jButton2.setBounds(20, 370, 110, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +92,7 @@ public class Task_panel extends javax.swing.JFrame {
         jPanel1.add(jtftaskid);
         jtftaskid.setBounds(130, 330, 60, 20);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Show Tasks");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,19 +100,26 @@ public class Task_panel extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(50, 240, 130, 23);
+        jButton1.setBounds(40, 240, 130, 23);
 
         jrbcustomer.setBackground(new java.awt.Color(97, 212, 195));
         buttonGroup1.add(jrbcustomer);
+        jrbcustomer.setForeground(new java.awt.Color(255, 255, 255));
         jrbcustomer.setText("Customer Task");
         jPanel1.add(jrbcustomer);
-        jrbcustomer.setBounds(50, 190, 130, 23);
+        jrbcustomer.setBounds(40, 190, 130, 20);
 
         jrboffice.setBackground(new java.awt.Color(97, 212, 195));
         buttonGroup1.add(jrboffice);
+        jrboffice.setForeground(new java.awt.Color(255, 255, 255));
         jrboffice.setText("Office Task");
+        jrboffice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbofficeActionPerformed(evt);
+            }
+        });
         jPanel1.add(jrboffice);
-        jrboffice.setBounds(50, 170, 130, 23);
+        jrboffice.setBounds(40, 170, 130, 20);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,7 +130,7 @@ public class Task_panel extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Manage all your pending tasks from here");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(220, 100, 200, 30);
+        jLabel2.setBounds(10, 110, 320, 30);
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,20 +138,26 @@ public class Task_panel extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(150, 10, 410, 50);
 
-        jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(jSeparator7);
-        jSeparator7.setBounds(30, 140, 170, 2);
-
         jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator8);
-        jSeparator8.setBounds(190, 100, 270, 2);
+        jSeparator8.setBounds(10, 100, 680, 2);
 
         jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator9);
         jSeparator9.setBounds(20, 290, 170, 2);
 
+        jButton3.setBackground(new java.awt.Color(97, 212, 195));
+        jButton3.setText("Back");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(150, 370, 55, 23);
+
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 710, 460);
+        jPanel1.setBounds(0, 0, 700, 460);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -256,6 +271,15 @@ public class Task_panel extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jrbofficeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbofficeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrbofficeActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        new mahadev_menu_page().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -295,13 +319,13 @@ public class Task_panel extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTable jTable1;

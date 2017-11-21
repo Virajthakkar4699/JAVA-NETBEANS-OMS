@@ -32,7 +32,7 @@ password varchar(30));
 insert into login values('viraj4699','8469904699');
 insert into login values('ketan4699','9825118350');
 insert into login values('nandit6676','9727255447');			
-insert into login values('sagarshah1729','9979906255');
+
 
 
 create table company_list(

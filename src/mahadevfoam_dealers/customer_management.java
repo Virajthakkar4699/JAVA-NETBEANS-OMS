@@ -79,10 +79,12 @@ public class customer_management extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customer Management");
+        setMinimumSize(new java.awt.Dimension(910, 490));
+        setPreferredSize(new java.awt.Dimension(925, 500));
         getContentPane().setLayout(null);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText(" Name:-");
+        jLabel2.setText("Name:-");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(10, 51, 240, 24);
         getContentPane().add(jtfcusname);
@@ -131,6 +133,7 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
+        jButton2.setBackground(new java.awt.Color(97, 212, 195));
         jButton2.setText("Add Customer");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +143,7 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(10, 290, 130, 23);
 
+        jButton3.setBackground(new java.awt.Color(97, 212, 195));
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +153,7 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(150, 290, 80, 23);
 
+        jButton4.setBackground(new java.awt.Color(97, 212, 195));
         jButton4.setText("Delete");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,25 +164,30 @@ public class customer_management extends javax.swing.JFrame {
         jButton4.setBounds(240, 290, 70, 23);
 
         buttonGroup1.add(jrbtable);
+        jrbtable.setForeground(new java.awt.Color(255, 255, 255));
         jrbtable.setText("View in Table");
         jPanel1.add(jrbtable);
         jrbtable.setBounds(50, 340, 120, 23);
 
         buttonGroup1.add(jrbfield);
+        jrbfield.setForeground(new java.awt.Color(255, 255, 255));
         jrbfield.setText("View in Fields");
         jPanel1.add(jrbfield);
         jrbfield.setBounds(50, 370, 120, 23);
 
         buttonGroup1.add(jrbsearch);
+        jrbsearch.setForeground(new java.awt.Color(255, 255, 255));
         jrbsearch.setText("Search");
         jPanel1.add(jrbsearch);
         jrbsearch.setBounds(50, 400, 120, 23);
 
         buttonGroup1.add(jrbregionwise);
+        jrbregionwise.setForeground(new java.awt.Color(255, 255, 255));
         jrbregionwise.setText("View Region Wise");
         jPanel1.add(jrbregionwise);
         jrbregionwise.setBounds(50, 430, 170, 23);
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("View");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,6 +211,7 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(520, 20, 366, 402);
 
+        jButton6.setBackground(new java.awt.Color(97, 212, 195));
         jButton6.setText("Go to Billings");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,6 +221,7 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.add(jButton6);
         jButton6.setBounds(400, 290, 110, 23);
 
+        jButton5.setBackground(new java.awt.Color(97, 212, 195));
         jButton5.setText("Back");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

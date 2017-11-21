@@ -81,6 +81,7 @@ public class Dealer_Portal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DEALER_DECK");
+        setPreferredSize(new java.awt.Dimension(715, 370));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
@@ -90,7 +91,7 @@ public class Dealer_Portal extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MAHADEV FOAM AND FURNISHING");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(117, 21, 410, 50);
+        jLabel2.setBounds(120, 20, 410, 50);
 
         jPanel3.setBackground(new java.awt.Color(97, 212, 195));
 
@@ -164,6 +165,7 @@ public class Dealer_Portal extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(20, 90, 340, 197);
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +181,7 @@ public class Dealer_Portal extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("DEALER MANAGEMENT TOOLS");
 
-        jButton3.setText("CREATE A NEW DEALER");
+        jButton3.setText("Create New Dealer");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

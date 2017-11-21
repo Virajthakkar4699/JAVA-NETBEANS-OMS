@@ -47,6 +47,7 @@ public class Godown_management extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Godown management");
+        setPreferredSize(new java.awt.Dimension(470, 355));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
@@ -65,6 +66,7 @@ public class Godown_management extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(240, 180, 140, 140);
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Close");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +76,7 @@ public class Godown_management extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(80, 250, 120, 30);
 
+        jButton2.setBackground(new java.awt.Color(97, 212, 195));
         jButton2.setText("Add Godown");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

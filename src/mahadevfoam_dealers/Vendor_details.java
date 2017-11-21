@@ -60,6 +60,7 @@ public class Vendor_details extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vendor Details");
+        setPreferredSize(new java.awt.Dimension(920, 410));
         getContentPane().setLayout(null);
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,6 +115,7 @@ public class Vendor_details extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("View");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +123,7 @@ public class Vendor_details extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(97, 212, 195));
         jButton7.setText("Back");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +131,7 @@ public class Vendor_details extends javax.swing.JFrame {
             }
         });
 
+        jButton8.setBackground(new java.awt.Color(97, 212, 195));
         jButton8.setText("Dealer update");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +139,7 @@ public class Vendor_details extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(97, 212, 195));
         jButton2.setText("Add Dealer");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +158,7 @@ public class Vendor_details extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jButton4.setBackground(new java.awt.Color(97, 212, 195));
         jButton4.setText("Delete");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -70,6 +70,7 @@ public class cash_mgmt extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manage your Cash");
+        setPreferredSize(new java.awt.Dimension(700, 465));
         getContentPane().setLayout(null);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -123,6 +124,7 @@ public class cash_mgmt extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
 
+        jButton2.setBackground(new java.awt.Color(97, 212, 195));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,8 +132,9 @@ public class cash_mgmt extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(530, 240, 55, 23);
+        jButton2.setBounds(500, 270, 130, 23);
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Save");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +142,7 @@ public class cash_mgmt extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(390, 240, 57, 23);
+        jButton1.setBounds(500, 230, 130, 23);
 
         buttonGroup1.add(Debit);
         Debit.setForeground(new java.awt.Color(255, 255, 255));
@@ -155,7 +158,7 @@ public class cash_mgmt extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Debit);
-        Debit.setBounds(540, 40, 51, 23);
+        Debit.setBounds(480, 40, 70, 23);
 
         buttonGroup1.add(credt);
         credt.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,7 +174,7 @@ public class cash_mgmt extends javax.swing.JFrame {
             }
         });
         jPanel1.add(credt);
-        credt.setBounds(420, 40, 55, 23);
+        credt.setBounds(380, 40, 80, 23);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("ID:-");
@@ -197,6 +200,7 @@ public class cash_mgmt extends javax.swing.JFrame {
         jPanel1.add(jSeparator1);
         jSeparator1.setBounds(340, 10, 2, 407);
 
+        jButton3.setBackground(new java.awt.Color(97, 212, 195));
         jButton3.setText("View Record Date wise");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

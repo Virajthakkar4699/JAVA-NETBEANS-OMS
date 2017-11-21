@@ -70,27 +70,10 @@ public class bills extends javax.swing.JFrame {
         jtflength = new javax.swing.JTextField();
         jtfwidth = new javax.swing.JTextField();
         jtfheight = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jSpinner5 = new javax.swing.JSpinner();
-        jLabel14 = new javax.swing.JLabel();
-        Jinvoicenumberbill = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jcusnamebill = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
-        jcusaddress = new javax.swing.JTextField();
-        Jinvoicedate = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        jcusphone = new javax.swing.JTextField();
-        Jcusidbill = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel23 = new javax.swing.JLabel();
-        jtfnettotal = new javax.swing.JTextField();
         jlbmsg = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jTfupi = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -104,6 +87,23 @@ public class bills extends javax.swing.JFrame {
         jcomboproductselect = new javax.swing.JComboBox();
         jRbretails = new javax.swing.JRadioButton();
         jrbwholesale = new javax.swing.JRadioButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        Jinvoicenumberbill = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        Jcusidbill = new javax.swing.JTextField();
+        Jinvoicedate = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jcusnamebill = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jcusaddress = new javax.swing.JTextField();
+        jcusphone = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jtfnettotal = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         jcusnamebill2.setEditable(false);
         jcusnamebill2.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -119,6 +119,7 @@ public class bills extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("New sales Invoice");
+        setPreferredSize(new java.awt.Dimension(1085, 640));
         getContentPane().setLayout(null);
         getContentPane().add(jLabel1);
         jLabel1.setBounds(983, 632, 0, 0);
@@ -141,6 +142,7 @@ public class bills extends javax.swing.JFrame {
         getContentPane().add(JTFID);
         JTFID.setBounds(140, 60, 112, 25);
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("<HTML>Open<p.> Customer Portal</HTML>");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,19 +268,6 @@ public class bills extends javax.swing.JFrame {
         getContentPane().add(jtfheight);
         jtfheight.setBounds(275, 356, 41, 20);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Comp_Name", "Product_name", "Length", "Width", "Height (in mm)", "Rate", "Quantity", "Total", "Discount %", "Net Amount"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(448, 235, 525, 191);
-
         jSpinner5.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         jSpinner5.setOpaque(false);
         jSpinner5.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -289,108 +278,6 @@ public class bills extends javax.swing.JFrame {
         getContentPane().add(jSpinner5);
         jSpinner5.setBounds(136, 459, 65, 20);
 
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Invoice Id:-");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(452, 39, 110, 23);
-        getContentPane().add(Jinvoicenumberbill);
-        Jinvoicenumberbill.setBounds(566, 40, 88, 20);
-
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("Invoice Date:-");
-        getContentPane().add(jLabel17);
-        jLabel17.setBounds(452, 99, 110, 23);
-
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Customer Id:-");
-        getContentPane().add(jLabel18);
-        jLabel18.setBounds(452, 71, 110, 14);
-
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("Customer Name:-");
-        getContentPane().add(jLabel19);
-        jLabel19.setBounds(452, 131, 150, 14);
-
-        jcusnamebill.setEditable(false);
-        jcusnamebill.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcusnamebillActionPerformed(evt);
-            }
-        });
-        jcusnamebill.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jcusnamebillFocusGained(evt);
-            }
-        });
-        getContentPane().add(jcusnamebill);
-        jcusnamebill.setBounds(566, 128, 213, 20);
-
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Customer Address:-");
-        getContentPane().add(jLabel20);
-        jLabel20.setBounds(452, 169, 140, 14);
-
-        jcusaddress.setEditable(false);
-        jcusaddress.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcusaddressActionPerformed(evt);
-            }
-        });
-        jcusaddress.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jcusaddressFocusGained(evt);
-            }
-        });
-        getContentPane().add(jcusaddress);
-        jcusaddress.setBounds(566, 166, 213, 20);
-
-        Jinvoicedate.setEditable(false);
-        Jinvoicedate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JinvoicedateActionPerformed(evt);
-            }
-        });
-        Jinvoicedate.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                JinvoicedateFocusGained(evt);
-            }
-        });
-        getContentPane().add(Jinvoicedate);
-        Jinvoicedate.setBounds(566, 100, 87, 20);
-
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("Customer Phone:-");
-        getContentPane().add(jLabel21);
-        jLabel21.setBounds(452, 207, 140, 14);
-
-        jcusphone.setEditable(false);
-        jcusphone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcusphoneActionPerformed(evt);
-            }
-        });
-        jcusphone.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jcusphoneFocusGained(evt);
-            }
-        });
-        getContentPane().add(jcusphone);
-        jcusphone.setBounds(566, 204, 134, 20);
-
-        Jcusidbill.setEditable(false);
-        Jcusidbill.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JcusidbillActionPerformed(evt);
-            }
-        });
-        Jcusidbill.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                JcusidbillFocusGained(evt);
-            }
-        });
-        getContentPane().add(Jcusidbill);
-        Jcusidbill.setBounds(566, 68, 87, 20);
-
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Date:-");
         getContentPane().add(jLabel22);
@@ -398,25 +285,9 @@ public class bills extends javax.swing.JFrame {
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(436, 11, 2, 615);
-
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("Total");
-        getContentPane().add(jLabel23);
-        jLabel23.setBounds(448, 432, 82, 23);
-        getContentPane().add(jtfnettotal);
-        jtfnettotal.setBounds(567, 433, 88, 20);
+        jSeparator1.setBounds(434, 26, 2, 570);
         getContentPane().add(jlbmsg);
         jlbmsg.setBounds(659, 432, 314, 23);
-
-        jButton4.setText("Add to collection list");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(489, 488, 127, 23);
 
         jTfupi.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -441,6 +312,7 @@ public class bills extends javax.swing.JFrame {
         jPanel1.add(jLabel24);
         jLabel24.setBounds(213, 461, 109, 20);
 
+        jButton7.setBackground(new java.awt.Color(97, 212, 195));
         jButton7.setText("BACK");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -450,6 +322,7 @@ public class bills extends javax.swing.JFrame {
         jPanel1.add(jButton7);
         jButton7.setBounds(140, 590, 100, 23);
 
+        jbt_save.setBackground(new java.awt.Color(97, 212, 195));
         jbt_save.setText("SAVE");
         jbt_save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -457,7 +330,7 @@ public class bills extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jbt_save);
-        jbt_save.setBounds(10, 590, 90, 23);
+        jbt_save.setBounds(40, 590, 90, 23);
 
         Jinvoicenumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -523,8 +396,140 @@ public class bills extends javax.swing.JFrame {
         jPanel1.add(jrbwholesale);
         jrbwholesale.setBounds(260, 120, 150, 23);
 
+        jButton4.setBackground(new java.awt.Color(97, 212, 195));
+        jButton4.setText("Add to collection list");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+        jButton4.setBounds(450, 520, 190, 23);
+
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Invoice Id:-");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(450, 20, 110, 23);
+        jPanel1.add(Jinvoicenumberbill);
+        Jinvoicenumberbill.setBounds(580, 20, 88, 30);
+
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Customer Id:-");
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(450, 70, 110, 14);
+
+        Jcusidbill.setEditable(false);
+        Jcusidbill.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                JcusidbillFocusGained(evt);
+            }
+        });
+        Jcusidbill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JcusidbillActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Jcusidbill);
+        Jcusidbill.setBounds(580, 60, 87, 30);
+
+        Jinvoicedate.setEditable(false);
+        Jinvoicedate.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                JinvoicedateFocusGained(evt);
+            }
+        });
+        Jinvoicedate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JinvoicedateActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Jinvoicedate);
+        Jinvoicedate.setBounds(580, 100, 87, 30);
+
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Invoice Date:-");
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(450, 110, 110, 23);
+
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Customer Name:-");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(450, 150, 150, 14);
+
+        jcusnamebill.setEditable(false);
+        jcusnamebill.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jcusnamebillFocusGained(evt);
+            }
+        });
+        jcusnamebill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcusnamebillActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jcusnamebill);
+        jcusnamebill.setBounds(580, 140, 213, 30);
+
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Customer Address:-");
+        jPanel1.add(jLabel20);
+        jLabel20.setBounds(450, 190, 140, 20);
+
+        jcusaddress.setEditable(false);
+        jcusaddress.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jcusaddressFocusGained(evt);
+            }
+        });
+        jcusaddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcusaddressActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jcusaddress);
+        jcusaddress.setBounds(580, 180, 213, 30);
+
+        jcusphone.setEditable(false);
+        jcusphone.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jcusphoneFocusGained(evt);
+            }
+        });
+        jcusphone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcusphoneActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jcusphone);
+        jcusphone.setBounds(580, 220, 134, 30);
+
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Customer Phone:-");
+        jPanel1.add(jLabel21);
+        jLabel21.setBounds(450, 230, 140, 14);
+        jPanel1.add(jtfnettotal);
+        jtfnettotal.setBounds(530, 470, 88, 30);
+
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("Total");
+        jPanel1.add(jLabel23);
+        jLabel23.setBounds(450, 470, 82, 23);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Comp_Name", "Product_name", "Length", "Width", "Height (in mm)", "Rate", "Quantity", "Total", "Discount %", "Net Amount"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(450, 270, 600, 191);
+
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1000, 640);
+        jPanel1.setBounds(0, 0, 1060, 640);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

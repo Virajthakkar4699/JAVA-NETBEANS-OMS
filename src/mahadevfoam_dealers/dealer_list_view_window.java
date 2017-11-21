@@ -83,6 +83,7 @@ public class dealer_list_view_window extends javax.swing.JFrame {
         setTitle("Dealer Database");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jdealertable.setBackground(new java.awt.Color(97, 212, 195));
         jdealertable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -95,6 +96,7 @@ public class dealer_list_view_window extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 731, 331));
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

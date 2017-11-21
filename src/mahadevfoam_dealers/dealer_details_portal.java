@@ -58,6 +58,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jtincst = new javax.swing.JTextField();
@@ -82,9 +83,11 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dealer Modification");
+        setPreferredSize(new java.awt.Dimension(530, 515));
         getContentPane().setLayout(null);
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,6 +163,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
 
+        jButton5.setBackground(new java.awt.Color(97, 212, 195));
         jButton5.setText("Back");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,6 +173,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jPanel1.add(jButton5);
         jButton5.setBounds(380, 440, 90, 23);
 
+        jButton6.setBackground(new java.awt.Color(97, 212, 195));
         jButton6.setText("Dealer update");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +183,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jPanel1.add(jButton6);
         jButton6.setBounds(250, 440, 120, 23);
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Add Dealer");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -188,6 +194,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(30, 440, 120, 23);
 
+        jButton3.setBackground(new java.awt.Color(97, 212, 195));
         jButton3.setText("Delete");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +206,8 @@ public class dealer_details_portal extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 530, 480);
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(560, 10, 640, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -336,6 +345,8 @@ try {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jaddress;
     private javax.swing.JTextField jcontactnumber;

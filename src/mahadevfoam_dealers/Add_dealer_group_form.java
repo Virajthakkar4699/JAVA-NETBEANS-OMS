@@ -53,18 +53,18 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Add Dealer group");
+        setBackground(new java.awt.Color(36, 47, 65));
+        setPreferredSize(new java.awt.Dimension(610, 345));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
-        jPanel1.setLayout(null);
-        jPanel1.add(jTfaddealer);
-        jTfaddealer.setBounds(187, 156, 133, 20);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jTfaddealer, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 156, 133, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enter Dealer Group :-");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(27, 152, 156, 24);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 152, 156, 24));
 
         jdealergrptable.setBackground(new java.awt.Color(97, 212, 195));
         jdealergrptable.setModel(new javax.swing.table.DefaultTableModel(
@@ -85,60 +85,56 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jdealergrptable);
 
-        jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(346, 132, 220, 158);
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 132, 220, 158));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Dealer Group Update");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(70, 72, 189, 41);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 72, -1, 41));
 
+        viewallbutton.setBackground(new java.awt.Color(97, 212, 195));
         viewallbutton.setText("View All");
         viewallbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewallbuttonActionPerformed(evt);
             }
         });
-        jPanel1.add(viewallbutton);
-        viewallbutton.setBounds(16, 254, 154, 36);
+        jPanel1.add(viewallbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 254, 154, 36));
 
+        searchbutton.setBackground(new java.awt.Color(97, 212, 195));
         searchbutton.setText("Search");
         searchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchbuttonActionPerformed(evt);
             }
         });
-        jPanel1.add(searchbutton);
-        searchbutton.setBounds(199, 254, 105, 36);
+        jPanel1.add(searchbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 254, 105, 36));
 
+        jButton3.setBackground(new java.awt.Color(97, 212, 195));
         jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(199, 202, 105, 34);
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 202, 105, 34));
 
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Add Dealer Group");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(16, 202, 154, 34);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 202, 154, 34));
 
         jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(jSeparator7);
-        jSeparator7.setBounds(36, 119, 270, 2);
+        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 119, 270, -1));
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("MAHADEV FOAM AND FURNISHING");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(95, 11, 410, 50);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 11, 410, 50));
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 610, 330);

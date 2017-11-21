@@ -59,6 +59,7 @@ public class Add_region_form extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Region update");
+        setPreferredSize(new java.awt.Dimension(520, 340));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
@@ -85,6 +86,7 @@ public class Add_region_form extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(330, 90, 170, 190);
 
+        searchbutton.setBackground(new java.awt.Color(97, 212, 195));
         searchbutton.setText("Search");
         searchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +96,7 @@ public class Add_region_form extends javax.swing.JFrame {
         jPanel1.add(searchbutton);
         searchbutton.setBounds(210, 250, 90, 30);
 
+        viewallbutton.setBackground(new java.awt.Color(97, 212, 195));
         viewallbutton.setText("View All");
         viewallbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +106,7 @@ public class Add_region_form extends javax.swing.JFrame {
         jPanel1.add(viewallbutton);
         viewallbutton.setBounds(50, 250, 100, 30);
 
+        backbutton.setBackground(new java.awt.Color(97, 212, 195));
         backbutton.setText("Back");
         backbutton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         backbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +117,7 @@ public class Add_region_form extends javax.swing.JFrame {
         jPanel1.add(backbutton);
         backbutton.setBounds(210, 200, 90, 30);
 
+        addregionbutton.setBackground(new java.awt.Color(97, 212, 195));
         addregionbutton.setText("Add Region");
         addregionbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
