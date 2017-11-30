@@ -136,7 +136,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(147, 481, 55, 23);
+        jButton6.setBounds(147, 481, 80, 23);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
@@ -169,7 +169,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(270, 80, 140, 23);
+        jButton1.setBounds(270, 80, 150, 23);
 
         jButton2.setBackground(new java.awt.Color(97, 212, 195));
         jButton2.setText("Add To Stock");
