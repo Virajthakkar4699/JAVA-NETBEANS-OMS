@@ -111,9 +111,11 @@ public class stock extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(420, 220, 100, 130);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, 120, 590, 37);
+        jLabel1.setBounds(10, 120, 630, 37);
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));

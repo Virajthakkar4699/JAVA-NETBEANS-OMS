@@ -47,7 +47,7 @@ public class Godown_management extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Godown management");
-        setPreferredSize(new java.awt.Dimension(470, 355));
+        setPreferredSize(new java.awt.Dimension(470, 360));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));

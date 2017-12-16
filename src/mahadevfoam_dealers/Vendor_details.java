@@ -60,7 +60,7 @@ public class Vendor_details extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vendor Details");
-        setPreferredSize(new java.awt.Dimension(920, 410));
+        setPreferredSize(new java.awt.Dimension(930, 420));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));

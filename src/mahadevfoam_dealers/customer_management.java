@@ -52,17 +52,7 @@ public class customer_management extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel2 = new javax.swing.JLabel();
-        jtfcusname = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jtfid = new javax.swing.JTextField();
-        jtfcusphone = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jtfcusaddress = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
-        jcomboregion = new javax.swing.JComboBox();
         jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -76,6 +66,16 @@ public class customer_management extends javax.swing.JFrame {
         jcustable = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtfcusaddress = new javax.swing.JTextArea();
+        jtfcusphone = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jtfcusname = new javax.swing.JTextField();
+        jtfid = new javax.swing.JTextField();
+        jcomboregion = new javax.swing.JComboBox();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customer Management");
@@ -83,51 +83,10 @@ public class customer_management extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(925, 500));
         getContentPane().setLayout(null);
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Name:-");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 51, 240, 24);
-        getContentPane().add(jtfcusname);
-        jtfcusname.setBounds(126, 53, 364, 20);
-
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Contact Number:-");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 81, 150, 22);
-
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Customer ID:-");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 21, 180, 24);
-        getContentPane().add(jtfid);
-        jtfid.setBounds(126, 23, 50, 20);
-        getContentPane().add(jtfcusphone);
-        jtfcusphone.setBounds(126, 82, 364, 20);
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Address:-");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(13, 109, 190, 23);
-
-        jtfcusaddress.setColumns(20);
-        jtfcusaddress.setRows(5);
-        jScrollPane2.setViewportView(jtfcusaddress);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(126, 109, 364, 96);
-
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Region");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 242, 100, 14);
-
-        jcomboregion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcomboregionActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jcomboregion);
-        jcomboregion.setBounds(126, 239, 110, 20);
+        jLabel3.setBounds(20, 242, 100, 20);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -230,6 +189,47 @@ public class customer_management extends javax.swing.JFrame {
         });
         jPanel1.add(jButton5);
         jButton5.setBounds(320, 290, 70, 23);
+
+        jtfcusaddress.setColumns(20);
+        jtfcusaddress.setRows(5);
+        jScrollPane2.setViewportView(jtfcusaddress);
+
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(130, 136, 364, 90);
+        jPanel1.add(jtfcusphone);
+        jtfcusphone.setBounds(130, 100, 364, 30);
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Name:-");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(10, 60, 240, 30);
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Contact Number:-");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(10, 100, 150, 30);
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Address:-");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(10, 140, 190, 30);
+        jPanel1.add(jtfcusname);
+        jtfcusname.setBounds(130, 60, 364, 30);
+        jPanel1.add(jtfid);
+        jtfid.setBounds(130, 20, 50, 30);
+
+        jcomboregion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcomboregionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jcomboregion);
+        jcomboregion.setBounds(130, 240, 110, 30);
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Customer ID:-");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(10, 20, 120, 24);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 910, 460);

@@ -473,7 +473,7 @@
         <Component class="javax.swing.JTextField" name="jtfnettotal">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="540" y="450" width="88" height="-1"/>
+              <AbsoluteConstraints x="540" y="460" width="88" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -486,7 +486,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="420" y="450" width="82" height="23"/>
+              <AbsoluteConstraints x="420" y="460" width="82" height="23"/>
             </Constraint>
           </Constraints>
         </Component>

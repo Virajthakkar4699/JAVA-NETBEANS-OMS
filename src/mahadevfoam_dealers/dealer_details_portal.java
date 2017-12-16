@@ -60,34 +60,34 @@ public class dealer_details_portal extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jtincst = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jtingst = new javax.swing.JTextField();
-        jComboBoxregion = new javax.swing.JComboBox();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBoxdealergroup = new javax.swing.JComboBox();
-        jLabel5 = new javax.swing.JLabel();
-        jcontactnumber = new javax.swing.JTextField();
-        jid = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jcontactperson = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jfirmname = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jaddress = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jtingst = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jtincst = new javax.swing.JTextField();
+        jComboBoxregion = new javax.swing.JComboBox();
+        jLabel7 = new javax.swing.JLabel();
+        jComboBoxdealergroup = new javax.swing.JComboBox();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jaddress = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
+        jcontactnumber = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jcontactperson = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jfirmname = new javax.swing.JTextField();
+        jid = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dealer Modification");
-        setPreferredSize(new java.awt.Dimension(530, 515));
+        setPreferredSize(new java.awt.Dimension(540, 540));
         getContentPane().setLayout(null);
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,70 +95,10 @@ public class dealer_details_portal extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(10, 369, 90, 14);
 
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("TIN GST:-");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(10, 400, 90, 14);
-        getContentPane().add(jtincst);
-        jtincst.setBounds(201, 366, 280, 20);
-
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Region:-");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(10, 314, 150, 22);
-        getContentPane().add(jtingst);
-        jtingst.setBounds(201, 397, 280, 20);
-
-        getContentPane().add(jComboBoxregion);
-        jComboBoxregion.setBounds(201, 314, 280, 22);
-
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Dealer Group:-");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(10, 279, 150, 24);
-
-        getContentPane().add(jComboBoxdealergroup);
-        jComboBoxdealergroup.setBounds(201, 276, 280, 27);
-
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Contact Number:-");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 118, 150, 22);
-        getContentPane().add(jcontactnumber);
-        jcontactnumber.setBounds(201, 119, 280, 20);
-        getContentPane().add(jid);
-        jid.setBounds(201, 27, 50, 20);
-
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Dealer ID:-");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 25, 150, 24);
-        getContentPane().add(jcontactperson);
-        jcontactperson.setBounds(201, 86, 280, 20);
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Contact Person Name:-");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 85, 170, 22);
-        getContentPane().add(jfirmname);
-        jfirmname.setBounds(201, 57, 280, 20);
-
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Firm Name:-");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(10, 55, 150, 24);
-
-        jaddress.setColumns(20);
-        jaddress.setRows(5);
-        jScrollPane2.setViewportView(jaddress);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(201, 158, 280, 96);
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Address:-");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 158, 150, 23);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
@@ -171,7 +111,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(380, 440, 90, 23);
+        jButton5.setBounds(380, 460, 90, 23);
 
         jButton6.setBackground(new java.awt.Color(97, 212, 195));
         jButton6.setText("Dealer update");
@@ -181,7 +121,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(250, 440, 120, 23);
+        jButton6.setBounds(250, 460, 120, 23);
 
         jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Add Dealer");
@@ -192,7 +132,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(30, 440, 120, 23);
+        jButton1.setBounds(30, 460, 120, 23);
 
         jButton3.setBackground(new java.awt.Color(97, 212, 195));
         jButton3.setText("Delete");
@@ -202,10 +142,70 @@ public class dealer_details_portal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(160, 440, 80, 23);
+        jButton3.setBounds(160, 460, 80, 23);
+        jPanel1.add(jtingst);
+        jtingst.setBounds(200, 400, 280, 30);
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("TIN GST:-");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(10, 410, 90, 14);
+        jPanel1.add(jtincst);
+        jtincst.setBounds(200, 360, 280, 30);
+
+        jPanel1.add(jComboBoxregion);
+        jComboBoxregion.setBounds(200, 320, 280, 30);
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Region:-");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(10, 330, 150, 22);
+
+        jPanel1.add(jComboBoxdealergroup);
+        jComboBoxdealergroup.setBounds(200, 280, 280, 30);
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Dealer Group:-");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(10, 290, 150, 24);
+
+        jaddress.setColumns(20);
+        jaddress.setRows(5);
+        jScrollPane2.setViewportView(jaddress);
+
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(200, 170, 280, 100);
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Address:-");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(10, 210, 150, 23);
+        jPanel1.add(jcontactnumber);
+        jcontactnumber.setBounds(200, 130, 280, 30);
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Contact Number:-");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(10, 130, 150, 22);
+        jPanel1.add(jcontactperson);
+        jcontactperson.setBounds(200, 90, 280, 30);
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Contact Person Name:-");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(10, 100, 170, 22);
+        jPanel1.add(jfirmname);
+        jfirmname.setBounds(200, 50, 280, 30);
+        jPanel1.add(jid);
+        jid.setBounds(200, 10, 50, 30);
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Dealer ID:-");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(10, 20, 150, 24);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 530, 480);
+        jPanel1.setBounds(0, 0, 530, 510);
         getContentPane().add(jPanel3);
         jPanel3.setBounds(560, 10, 640, 450);
 

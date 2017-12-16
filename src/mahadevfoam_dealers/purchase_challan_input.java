@@ -327,12 +327,12 @@ public class purchase_challan_input extends javax.swing.JFrame {
         jPanel1.add(jtfvendor_id);
         jtfvendor_id.setBounds(120, 90, 140, 30);
         jPanel1.add(jtfnettotal);
-        jtfnettotal.setBounds(540, 450, 88, 20);
+        jtfnettotal.setBounds(540, 460, 88, 30);
 
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Total");
         jPanel1.add(jLabel23);
-        jLabel23.setBounds(420, 450, 82, 23);
+        jLabel23.setBounds(420, 460, 82, 23);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -117,7 +117,6 @@ public class Dealer_Portal extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("DATABASE");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -178,7 +177,6 @@ public class Dealer_Portal extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(97, 212, 195));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("DEALER MANAGEMENT TOOLS");
 
         jButton3.setText("Create New Dealer");

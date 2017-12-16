@@ -58,9 +58,13 @@ public class mahadev_menu_page extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Page");
+        setBackground(new java.awt.Color(36, 47, 65));
+        setPreferredSize(new java.awt.Dimension(900, 590));
         getContentPane().setLayout(null);
 
+        jButton2.setBackground(new java.awt.Color(36, 47, 65));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Logout");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +74,7 @@ public class mahadev_menu_page extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(320, 490, 150, 25);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\viraj\\Desktop\\flow.JPG")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mahadevfoam_dealers/images/flow.JPG"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 10, 860, 470);

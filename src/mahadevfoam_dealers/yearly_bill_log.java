@@ -34,34 +34,17 @@ public class yearly_bill_log extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jtablelog = new javax.swing.JTable();
-        jComboBox1 = new javax.swing.JComboBox();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtablelog = new javax.swing.JTable();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Yearly Bill");
-        setPreferredSize(new java.awt.Dimension(960, 440));
+        setPreferredSize(new java.awt.Dimension(960, 455));
         getContentPane().setLayout(null);
-
-        jtablelog.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Invoice ID", "Date", "Customer ID", "Name", "Contact Numberl", "Net Amount"
-            }
-        ));
-        jScrollPane1.setViewportView(jtablelog);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 45, 954, 328);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Retail", "Wholesale" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(10, 12, 100, 20);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
@@ -74,7 +57,7 @@ public class yearly_bill_log extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(860, 380, 70, 23);
+        jButton1.setBounds(840, 380, 70, 23);
 
         jButton2.setBackground(new java.awt.Color(97, 212, 195));
         jButton2.setText("Show Log");
@@ -84,7 +67,24 @@ public class yearly_bill_log extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(130, 10, 100, 23);
+        jButton2.setBounds(150, 10, 100, 23);
+
+        jtablelog.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Invoice ID", "Date", "Customer ID", "Name", "Contact Number", "Net Amount"
+            }
+        ));
+        jScrollPane1.setViewportView(jtablelog);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(30, 50, 890, 328);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Retail", "Wholesale" }));
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(30, 10, 100, 20);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 960, 440);

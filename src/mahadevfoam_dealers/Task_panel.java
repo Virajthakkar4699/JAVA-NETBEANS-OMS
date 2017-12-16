@@ -90,7 +90,7 @@ public class Task_panel extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(30, 330, 80, 20);
         jPanel1.add(jtftaskid);
-        jtftaskid.setBounds(130, 330, 60, 20);
+        jtftaskid.setBounds(130, 330, 60, 30);
 
         jButton1.setBackground(new java.awt.Color(97, 212, 195));
         jButton1.setText("Show Tasks");
@@ -121,22 +121,22 @@ public class Task_panel extends javax.swing.JFrame {
         jPanel1.add(jrboffice);
         jrboffice.setBounds(40, 170, 130, 20);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Task Panel");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(280, 70, 73, 25);
+        jLabel7.setBounds(280, 70, 100, 25);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Manage all your pending tasks from here");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(10, 110, 320, 30);
 
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("MAHADEV FOAM AND FURNISHING");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(150, 10, 410, 50);
+        jLabel4.setBounds(50, 10, 620, 50);
 
         jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator8);

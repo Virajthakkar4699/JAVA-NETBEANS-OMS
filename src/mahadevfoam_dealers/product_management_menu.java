@@ -37,13 +37,9 @@ public class product_management_menu extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jcomp_table = new javax.swing.JTable();
-        add_company_btn = new javax.swing.JButton();
-        c_name_input = new javax.swing.JTextField();
         j_p_name_text = new javax.swing.JTextField();
         jCombocompany = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
-        c_id_input = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jprod_table1 = new javax.swing.JTable();
         j_pid_text = new javax.swing.JTextField();
@@ -55,7 +51,6 @@ public class product_management_menu extends javax.swing.JFrame {
         jtfprice_purchased = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jSeparator7 = new javax.swing.JSeparator();
@@ -65,6 +60,11 @@ public class product_management_menu extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        add_company_btn = new javax.swing.JButton();
+        c_name_input = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        c_id_input = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -93,18 +93,6 @@ public class product_management_menu extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(10, 112, 412, 153);
-
-        add_company_btn.setBackground(new java.awt.Color(97, 212, 195));
-        add_company_btn.setText("Add Company");
-        add_company_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                add_company_btnActionPerformed(evt);
-            }
-        });
-        getContentPane().add(add_company_btn);
-        add_company_btn.setBounds(443, 144, 140, 23);
-        getContentPane().add(c_name_input);
-        c_name_input.setBounds(443, 109, 132, 23);
         getContentPane().add(j_p_name_text);
         j_p_name_text.setBounds(578, 259, 142, 30);
 
@@ -125,13 +113,6 @@ public class product_management_menu extends javax.swing.JFrame {
         jLabel3.setText("Select Company");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(443, 188, 200, 17);
-        getContentPane().add(c_id_input);
-        c_id_input.setBounds(443, 83, 132, 20);
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("C_ID");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(579, 86, 99, 14);
 
         jprod_table1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jprod_table1.setModel(new javax.swing.table.DefaultTableModel(
@@ -194,11 +175,6 @@ public class product_management_menu extends javax.swing.JFrame {
         jLabel7.setText("ADD COMPANY AND PRODUCT");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(476, 27, 290, 22);
-
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Company Name");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(579, 109, 99, 23);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -266,6 +242,36 @@ public class product_management_menu extends javax.swing.JFrame {
         });
         jPanel1.add(jButton6);
         jButton6.setBounds(10, 80, 130, 23);
+
+        add_company_btn.setBackground(new java.awt.Color(97, 212, 195));
+        add_company_btn.setText("Add Company");
+        add_company_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add_company_btnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(add_company_btn);
+        add_company_btn.setBounds(440, 160, 140, 23);
+        jPanel1.add(c_name_input);
+        c_name_input.setBounds(440, 120, 132, 30);
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Company Name");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(580, 120, 99, 23);
+
+        c_id_input.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c_id_inputActionPerformed(evt);
+            }
+        });
+        jPanel1.add(c_id_input);
+        c_id_input.setBounds(440, 80, 132, 30);
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("C_ID");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(580, 90, 99, 20);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 810, 510);
@@ -427,6 +433,10 @@ dispose();
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         new Godown_management().setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void c_id_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_id_inputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c_id_inputActionPerformed
 
     /**
      * @param args the command line arguments

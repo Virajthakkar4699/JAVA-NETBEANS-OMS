@@ -55,7 +55,7 @@ public class payments1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Payments");
-        setPreferredSize(new java.awt.Dimension(640, 385));
+        setPreferredSize(new java.awt.Dimension(640, 395));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));

@@ -49,33 +49,13 @@ public class bills extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         JTFID = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jcombocompanyselect = new javax.swing.JComboBox();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jtfrate = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jlbtotal = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jtfdis = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jlbdis = new javax.swing.JLabel();
-        jtflength = new javax.swing.JTextField();
-        jtfwidth = new javax.swing.JTextField();
-        jtfheight = new javax.swing.JTextField();
-        jSpinner5 = new javax.swing.JSpinner();
         jLabel22 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jlbmsg = new javax.swing.JLabel();
-        jTfupi = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jTfavailquant = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
@@ -104,6 +84,26 @@ public class bills extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jcombocompanyselect = new javax.swing.JComboBox();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jtfheight = new javax.swing.JTextField();
+        jtfwidth = new javax.swing.JTextField();
+        jtflength = new javax.swing.JTextField();
+        jTfupi = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jtfrate = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jlbdis = new javax.swing.JLabel();
+        jtfdis = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jlbtotal = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jSpinner5 = new javax.swing.JSpinner();
 
         jcusnamebill2.setEditable(false);
         jcusnamebill2.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -119,7 +119,7 @@ public class bills extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("New sales Invoice");
-        setPreferredSize(new java.awt.Dimension(1085, 640));
+        setPreferredSize(new java.awt.Dimension(1170, 690));
         getContentPane().setLayout(null);
         getContentPane().add(jLabel1);
         jLabel1.setBounds(983, 632, 0, 0);
@@ -140,47 +140,12 @@ public class bills extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JTFID);
-        JTFID.setBounds(140, 60, 112, 25);
-
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("<HTML>Open<p.> Customer Portal</HTML>");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(265, 60, 160, 38);
+        JTFID.setBounds(140, 60, 112, 30);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Customer Name:-");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(13, 161, 140, 14);
-
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Select Product:-");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(13, 243, 130, 14);
-
-        jcombocompanyselect.setBackground(new java.awt.Color(97, 212, 195));
-        jcombocompanyselect.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jcombocompanyselect.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jcombocompanyselectFocusGained(evt);
-            }
-        });
-        getContentPane().add(jcombocompanyselect);
-        jcombocompanyselect.setBounds(140, 210, 163, 20);
-
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Select company:-");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(13, 205, 140, 14);
-
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("<html>Select<p> Size:-</html>");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(13, 278, 90, 63);
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("<HTML>Length<P> in inches</HTML>");
@@ -197,87 +162,6 @@ public class bills extends javax.swing.JFrame {
         getContentPane().add(jLabel10);
         jLabel10.setBounds(275, 288, 70, 50);
 
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Rate:-");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(10, 432, 110, 20);
-
-        jtfrate.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jtfrateFocusGained(evt);
-            }
-        });
-        getContentPane().add(jtfrate);
-        jtfrate.setBounds(136, 432, 127, 20);
-
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Quantity:-");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(10, 458, 110, 20);
-
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Total:-");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(10, 490, 100, 23);
-
-        jlbtotal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jlbtotal);
-        jlbtotal.setBounds(136, 485, 84, 23);
-
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Discount (%):-");
-        getContentPane().add(jLabel15);
-        jLabel15.setBounds(10, 524, 110, 20);
-
-        jtfdis.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jtfdisFocusLost(evt);
-            }
-        });
-        getContentPane().add(jtfdis);
-        jtfdis.setBounds(136, 519, 84, 20);
-
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("NET AMOUNT:-");
-        getContentPane().add(jLabel16);
-        jLabel16.setBounds(13, 550, 120, 24);
-
-        jlbdis.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jlbdis.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jlbdisFocusGained(evt);
-            }
-        });
-        getContentPane().add(jlbdis);
-        jlbdis.setBounds(136, 551, 84, 23);
-        getContentPane().add(jtflength);
-        jtflength.setBounds(136, 356, 41, 20);
-        getContentPane().add(jtfwidth);
-        jtfwidth.setBounds(204, 356, 41, 20);
-
-        jtfheight.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfheightActionPerformed(evt);
-            }
-        });
-        jtfheight.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jtfheightFocusLost(evt);
-            }
-        });
-        getContentPane().add(jtfheight);
-        jtfheight.setBounds(275, 356, 41, 20);
-
-        jSpinner5.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
-        jSpinner5.setOpaque(false);
-        jSpinner5.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSpinner5StateChanged(evt);
-            }
-        });
-        getContentPane().add(jSpinner5);
-        jSpinner5.setBounds(136, 459, 65, 20);
-
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Date:-");
         getContentPane().add(jLabel22);
@@ -289,23 +173,10 @@ public class bills extends javax.swing.JFrame {
         getContentPane().add(jlbmsg);
         jlbmsg.setBounds(659, 432, 314, 23);
 
-        jTfupi.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTfupiFocusLost(evt);
-            }
-        });
-        getContentPane().add(jTfupi);
-        jTfupi.setBounds(136, 394, 47, 20);
-
-        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setText("UPI:-");
-        getContentPane().add(jLabel25);
-        jLabel25.setBounds(10, 394, 100, 20);
-
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
         jPanel1.add(jTfavailquant);
-        jTfavailquant.setBounds(332, 461, 92, 20);
+        jTfavailquant.setBounds(330, 460, 92, 30);
 
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Available quatity:-");
@@ -320,7 +191,7 @@ public class bills extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton7);
-        jButton7.setBounds(140, 590, 100, 23);
+        jButton7.setBounds(150, 620, 100, 23);
 
         jbt_save.setBackground(new java.awt.Color(97, 212, 195));
         jbt_save.setText("SAVE");
@@ -330,7 +201,7 @@ public class bills extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jbt_save);
-        jbt_save.setBounds(40, 590, 90, 23);
+        jbt_save.setBounds(40, 620, 90, 23);
 
         Jinvoicenumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,7 +214,7 @@ public class bills extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Jinvoicenumber);
-        Jinvoicenumber.setBounds(140, 120, 111, 20);
+        Jinvoicenumber.setBounds(140, 110, 111, 30);
 
         jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(987903480000L), new java.util.Date(987903480000L), new java.util.Date(2029282680000L), java.util.Calendar.MONTH));
         jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -367,7 +238,7 @@ public class bills extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jcusname);
-        jcusname.setBounds(140, 160, 163, 20);
+        jcusname.setBounds(140, 150, 163, 30);
 
         jcomboproductselect.setBackground(new java.awt.Color(97, 212, 195));
         jcomboproductselect.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -377,7 +248,7 @@ public class bills extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jcomboproductselect);
-        jcomboproductselect.setBounds(140, 240, 163, 20);
+        jcomboproductselect.setBounds(140, 240, 163, 30);
 
         buttonGroup1.add(jRbretails);
         jRbretails.setForeground(new java.awt.Color(255, 255, 255));
@@ -388,13 +259,13 @@ public class bills extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jRbretails);
-        jRbretails.setBounds(360, 120, 70, 23);
+        jRbretails.setBounds(360, 110, 70, 23);
 
         buttonGroup1.add(jrbwholesale);
         jrbwholesale.setForeground(new java.awt.Color(255, 255, 255));
         jrbwholesale.setText("WHOLESALE");
         jPanel1.add(jrbwholesale);
-        jrbwholesale.setBounds(260, 120, 150, 23);
+        jrbwholesale.setBounds(260, 110, 150, 23);
 
         jButton4.setBackground(new java.awt.Color(97, 212, 195));
         jButton4.setText("Add to collection list");
@@ -526,10 +397,141 @@ public class bills extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(450, 270, 600, 191);
+        jScrollPane2.setBounds(450, 270, 680, 191);
+
+        jcombocompanyselect.setBackground(new java.awt.Color(97, 212, 195));
+        jcombocompanyselect.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcombocompanyselect.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jcombocompanyselectFocusGained(evt);
+            }
+        });
+        jPanel1.add(jcombocompanyselect);
+        jcombocompanyselect.setBounds(140, 200, 163, 30);
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Select Product:-");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(10, 250, 130, 14);
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Select company:-");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(10, 210, 140, 14);
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("<html>Select<p> Size:-</html>");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(10, 310, 90, 63);
+
+        jtfheight.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfheightFocusLost(evt);
+            }
+        });
+        jtfheight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfheightActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jtfheight);
+        jtfheight.setBounds(270, 340, 41, 30);
+        jPanel1.add(jtfwidth);
+        jtfwidth.setBounds(200, 340, 41, 30);
+        jPanel1.add(jtflength);
+        jtflength.setBounds(140, 340, 41, 30);
+
+        jTfupi.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTfupiFocusLost(evt);
+            }
+        });
+        jPanel1.add(jTfupi);
+        jTfupi.setBounds(140, 380, 47, 30);
+
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("UPI:-");
+        jPanel1.add(jLabel25);
+        jLabel25.setBounds(10, 380, 100, 20);
+
+        jtfrate.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jtfrateFocusGained(evt);
+            }
+        });
+        jPanel1.add(jtfrate);
+        jtfrate.setBounds(140, 420, 127, 30);
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Rate:-");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(10, 420, 110, 30);
+
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Quantity:-");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(10, 460, 110, 20);
+
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("NET AMOUNT:-");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(10, 580, 120, 24);
+
+        jlbdis.setBackground(new java.awt.Color(255, 255, 255));
+        jlbdis.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jlbdis.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jlbdisFocusGained(evt);
+            }
+        });
+        jPanel1.add(jlbdis);
+        jlbdis.setBounds(140, 580, 84, 23);
+
+        jtfdis.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfdisFocusLost(evt);
+            }
+        });
+        jPanel1.add(jtfdis);
+        jtfdis.setBounds(140, 540, 84, 30);
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Discount (%):-");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(10, 540, 110, 30);
+
+        jlbtotal.setBackground(new java.awt.Color(255, 255, 255));
+        jlbtotal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(jlbtotal);
+        jlbtotal.setBounds(140, 500, 84, 30);
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Total:-");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(10, 500, 100, 23);
+
+        jButton1.setBackground(new java.awt.Color(97, 212, 195));
+        jButton1.setText("<HTML>Open<p.> Customer Portal</HTML>");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(270, 60, 160, 38);
+
+        jSpinner5.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        jSpinner5.setOpaque(false);
+        jSpinner5.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner5StateChanged(evt);
+            }
+        });
+        jPanel1.add(jSpinner5);
+        jSpinner5.setBounds(140, 460, 65, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1060, 640);
+        jPanel1.setBounds(0, 0, 1160, 670);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
