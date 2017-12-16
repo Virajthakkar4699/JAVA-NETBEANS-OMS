@@ -56,7 +56,7 @@ public class login_page1 extends javax.swing.JFrame {
         jadminpass = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        Signup = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
@@ -64,8 +64,8 @@ public class login_page1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setResizable(false);
         setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
@@ -245,21 +245,21 @@ public class login_page1 extends javax.swing.JFrame {
         jPanel5.add(jLabel6);
         jLabel6.setBounds(75, 283, 187, 19);
 
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("SIGN UP");
+        jLabel7.setText("Sign up");
         jPanel5.add(jLabel7);
         jLabel7.setBounds(170, 380, 60, 19);
 
-        jButton2.setBackground(new java.awt.Color(36, 47, 65));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mahadevfoam_dealers/images/Cyan BG.JPG"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Signup.setBackground(new java.awt.Color(36, 47, 65));
+        Signup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mahadevfoam_dealers/images/Cyan BG.JPG"))); // NOI18N
+        Signup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SignupActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton2);
-        jButton2.setBounds(135, 372, 123, 39);
+        jPanel5.add(Signup);
+        Signup.setBounds(135, 372, 123, 39);
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
@@ -365,7 +365,7 @@ public class login_page1 extends javax.swing.JFrame {
        }  
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void SignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupActionPerformed
         try
        { 
          Class.forName("java.sql.Driver");
@@ -411,7 +411,7 @@ public class login_page1 extends javax.swing.JFrame {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_SignupActionPerformed
 
     /**
      * @param args the command line arguments
@@ -427,8 +427,8 @@ public class login_page1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Signup;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;

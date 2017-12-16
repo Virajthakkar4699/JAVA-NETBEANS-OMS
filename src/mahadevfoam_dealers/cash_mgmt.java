@@ -51,7 +51,6 @@ public class cash_mgmt extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
         jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -67,6 +66,8 @@ public class cash_mgmt extends javax.swing.JFrame {
         jamount = new javax.swing.JTextField();
         jrefer = new javax.swing.JTextField();
         jSpinner1 = new javax.swing.JSpinner();
+        jSpinner2 = new javax.swing.JSpinner();
+        jSpinner4 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manage your Cash");
@@ -110,16 +111,6 @@ public class cash_mgmt extends javax.swing.JFrame {
         jLabel2.setText("Debit");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(129, 253, 43, 19);
-
-        jSpinner2.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(987903480000L), new java.util.Date(987903480000L), new java.util.Date(2029282680000L), java.util.Calendar.MONTH));
-        jSpinner2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jSpinner2.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSpinner2StateChanged(evt);
-            }
-        });
-        getContentPane().add(jSpinner2);
-        jSpinner2.setBounds(10, 20, 120, 31);
 
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
@@ -216,7 +207,7 @@ public class cash_mgmt extends javax.swing.JFrame {
         jPanel1.add(jrefer);
         jrefer.setBounds(500, 150, 111, 20);
 
-        jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(987903480000L), new java.util.Date(987903480000L), new java.util.Date(2029282680000L), java.util.Calendar.MONTH));
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1513428373473L), new java.util.Date(1513428373473L), new java.util.Date(1513428373473L), java.util.Calendar.MONTH));
         jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -225,6 +216,26 @@ public class cash_mgmt extends javax.swing.JFrame {
         });
         jPanel1.add(jSpinner1);
         jSpinner1.setBounds(500, 190, 130, 31);
+
+        jSpinner2.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1513426523230L), new java.util.Date(), new java.util.Date(1513426523230L), java.util.Calendar.MONTH));
+        jSpinner2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinner2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner2StateChanged(evt);
+            }
+        });
+        jPanel1.add(jSpinner2);
+        jSpinner2.setBounds(500, 190, 130, 31);
+
+        jSpinner4.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1513426523230L), null, null, java.util.Calendar.MONTH));
+        jSpinner4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinner4.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner4StateChanged(evt);
+            }
+        });
+        jPanel1.add(jSpinner4);
+        jSpinner4.setBounds(10, 20, 130, 31);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 700, 430);
@@ -351,14 +362,10 @@ public class cash_mgmt extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jSpinner2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner2StateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jSpinner2StateChanged
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         DefaultTableModel model1=(DefaultTableModel)jTable1.getModel();
         DefaultTableModel model2=(DefaultTableModel)jTable2.getModel();
-        String date=(new SimpleDateFormat("yyyy-MM-dd").format(jSpinner2.getValue()));
+        String date=(new SimpleDateFormat("yyyy-MM-dd").format(jSpinner4.getValue()));
         
 try{
     
@@ -402,6 +409,14 @@ try{
         JOptionPane.showMessageDialog(this, e.getMessage()); 
  }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jSpinner2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner2StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner2StateChanged
+
+    private void jSpinner4StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner4StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner4StateChanged
 
     /**
      * @param args the command line arguments
@@ -456,6 +471,7 @@ try{
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JSpinner jSpinner4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jamount;

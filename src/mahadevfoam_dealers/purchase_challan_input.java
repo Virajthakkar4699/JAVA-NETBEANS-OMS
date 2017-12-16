@@ -49,7 +49,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        addtostock = new javax.swing.JButton();
         jvendorname = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jCombogodown = new javax.swing.JComboBox();
@@ -171,15 +171,15 @@ public class purchase_challan_input extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(270, 80, 150, 23);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Add To Stock");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        addtostock.setBackground(new java.awt.Color(97, 212, 195));
+        addtostock.setText("Add To Stock");
+        addtostock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                addtostockActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(20, 480, 120, 23);
+        jPanel1.add(addtostock);
+        addtostock.setBounds(20, 480, 120, 23);
 
         jvendorname.setEditable(false);
         jvendorname.addActionListener(new java.awt.event.ActionListener() {
@@ -339,7 +339,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Company", "Product", "Length", "Width", "Height (in mm)", "Purchase", "MRP", "Quantity", "Net Value", "UPI", "Godown"
+                "Comp.", "Product", "L", "W", "H (mm)", "Purchase", "MRP", "Quant.", "Net", "UPI", "Godown"
             }
         ));
         jScrollPane2.setViewportView(jTable1);
@@ -362,7 +362,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
         jcusphone.setBounds(540, 210, 134, 30);
 
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Customer Phone:-");
+        jLabel22.setText("vendor Phone:-");
         jPanel1.add(jLabel22);
         jLabel22.setBounds(420, 220, 150, 14);
 
@@ -381,12 +381,12 @@ public class purchase_challan_input extends javax.swing.JFrame {
         jcusaddress.setBounds(540, 170, 213, 30);
 
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("Customer Address:-");
+        jLabel21.setText("Vendor Address:-");
         jPanel1.add(jLabel21);
         jLabel21.setBounds(420, 180, 160, 14);
 
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("Customer Name:-");
+        jLabel19.setText("Vendor Name:-");
         jPanel1.add(jLabel19);
         jLabel19.setBounds(420, 140, 150, 14);
 
@@ -445,7 +445,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
         Jcusidbill.setBounds(540, 50, 87, 30);
 
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Customer Id:-");
+        jLabel20.setText("Vendor Id:-");
         jPanel1.add(jLabel20);
         jLabel20.setBounds(420, 60, 130, 14);
 
@@ -557,7 +557,8 @@ public class purchase_challan_input extends javax.swing.JFrame {
     }//GEN-LAST:event_jtpurchaseActionPerformed
 
     private void jtpurchaseFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtpurchaseFocusGained
-          try 
+        // this section will get the purchase price from the database  
+        try 
         {
         Class.forName("java.sql.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
@@ -586,7 +587,8 @@ public class purchase_challan_input extends javax.swing.JFrame {
     }//GEN-LAST:event_jtpurchaseFocusGained
 
     private void jtfmrpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfmrpFocusGained
-         try 
+              // this section will get the MRP from the database  
+        try 
         {
         Class.forName("java.sql.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
@@ -670,7 +672,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void addtostockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addtostockActionPerformed
         try 
         {
           Class.forName("java.sql.Driver");
@@ -740,7 +742,7 @@ public class purchase_challan_input extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_addtostockActionPerformed
 
     private void jcombocompanyselectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcombocompanyselectActionPerformed
         // TODO add your handling code here:
@@ -825,8 +827,8 @@ public class purchase_challan_input extends javax.swing.JFrame {
     private javax.swing.JTextField Jinvoicedate;
     private javax.swing.JTextField Jinvoicenumberbill;
     private javax.swing.JTextField Jinvoicenumberpur;
+    private javax.swing.JButton addtostock;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
     private javax.swing.JComboBox jCombogodown;
     private javax.swing.JLabel jLabel1;

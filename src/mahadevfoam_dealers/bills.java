@@ -67,7 +67,7 @@ public class bills extends javax.swing.JFrame {
         jcomboproductselect = new javax.swing.JComboBox();
         jRbretails = new javax.swing.JRadioButton();
         jrbwholesale = new javax.swing.JRadioButton();
-        jButton4 = new javax.swing.JButton();
+        payments = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         Jinvoicenumberbill = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
@@ -217,6 +217,7 @@ public class bills extends javax.swing.JFrame {
         Jinvoicenumber.setBounds(140, 110, 111, 30);
 
         jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(987903480000L), new java.util.Date(987903480000L), new java.util.Date(2029282680000L), java.util.Calendar.MONTH));
+        jSpinner1.setToolTipText("");
         jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -267,15 +268,15 @@ public class bills extends javax.swing.JFrame {
         jPanel1.add(jrbwholesale);
         jrbwholesale.setBounds(260, 110, 150, 23);
 
-        jButton4.setBackground(new java.awt.Color(97, 212, 195));
-        jButton4.setText("Add to collection list");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        payments.setBackground(new java.awt.Color(97, 212, 195));
+        payments.setText("Add to payments for collection of payment");
+        payments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                paymentsActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(450, 520, 190, 23);
+        jPanel1.add(payments);
+        payments.setBounds(450, 520, 310, 23);
 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Invoice Id:-");
@@ -478,6 +479,8 @@ public class bills extends javax.swing.JFrame {
         jLabel16.setBounds(10, 580, 120, 24);
 
         jlbdis.setBackground(new java.awt.Color(255, 255, 255));
+        jlbdis.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jlbdis.setForeground(new java.awt.Color(255, 255, 255));
         jlbdis.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jlbdis.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -501,6 +504,8 @@ public class bills extends javax.swing.JFrame {
         jLabel15.setBounds(10, 540, 110, 30);
 
         jlbtotal.setBackground(new java.awt.Color(255, 255, 255));
+        jlbtotal.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jlbtotal.setForeground(new java.awt.Color(255, 255, 255));
         jlbtotal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jlbtotal);
         jlbtotal.setBounds(140, 500, 84, 30);
@@ -666,13 +671,8 @@ dispose();
     }//GEN-LAST:event_jtfdisFocusLost
 
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
-        //Spinner
-        //Model property
 
-        //jLabel1.setText(new SimpleDateFormat("yyyy-MM-dd").format(jSpinner1.getValue()));
-        String date=(new SimpleDateFormat("yyyy-MM-dd").format(jSpinner1.getValue()));
-       // jcusname.setText(date); the value is stored in variable can be directly into database.
-
+        String date=(new SimpleDateFormat("yyyy-MM-dd").format(jSpinner1.getValue())); 
     }//GEN-LAST:event_jSpinner1StateChanged
 
     private void jbt_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_saveActionPerformed
@@ -962,7 +962,8 @@ dispose();
           int width=Integer.parseInt(jtfwidth.getText());
           int height=Integer.parseInt(jtfheight.getText());
           
-          
+          //below line will open the stock report frame and pass the parameters to show 
+          //available stock
           new stock(company,product,length,width,height).setVisible(true);
     }//GEN-LAST:event_jtfheightFocusLost
 
@@ -991,7 +992,7 @@ dispose();
         }
     }//GEN-LAST:event_jTfupiFocusLost
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void paymentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentsActionPerformed
         try 
         {
           Class.forName("java.sql.Driver");
@@ -1020,7 +1021,7 @@ dispose();
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_paymentsActionPerformed
 
     private void JTFIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFIDActionPerformed
         // TODO add your handling code here:
@@ -1069,7 +1070,6 @@ dispose();
     private javax.swing.JTextField Jinvoicenumberbill;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1124,5 +1124,6 @@ dispose();
     private javax.swing.JTextField jtfnettotal;
     private javax.swing.JTextField jtfrate;
     private javax.swing.JTextField jtfwidth;
+    private javax.swing.JButton payments;
     // End of variables declaration//GEN-END:variables
 }

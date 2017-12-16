@@ -54,18 +54,18 @@ public class customer_management extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        addcustomer = new javax.swing.JButton();
+        update = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
         jrbtable = new javax.swing.JRadioButton();
         jrbfield = new javax.swing.JRadioButton();
         jrbsearch = new javax.swing.JRadioButton();
         jrbregionwise = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        view = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jcustable = new javax.swing.JTable();
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        gotobillings = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtfcusaddress = new javax.swing.JTextArea();
         jtfcusphone = new javax.swing.JTextField();
@@ -80,7 +80,7 @@ public class customer_management extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customer Management");
         setMinimumSize(new java.awt.Dimension(910, 490));
-        setPreferredSize(new java.awt.Dimension(925, 500));
+        setPreferredSize(new java.awt.Dimension(990, 500));
         getContentPane().setLayout(null);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -92,35 +92,35 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Add Customer");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        addcustomer.setBackground(new java.awt.Color(97, 212, 195));
+        addcustomer.setText("Add Customer");
+        addcustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                addcustomerActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(10, 290, 130, 23);
+        jPanel1.add(addcustomer);
+        addcustomer.setBounds(10, 290, 130, 23);
 
-        jButton3.setBackground(new java.awt.Color(97, 212, 195));
-        jButton3.setText("Update");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        update.setBackground(new java.awt.Color(97, 212, 195));
+        update.setText("Update");
+        update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                updateActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(150, 290, 80, 23);
+        jPanel1.add(update);
+        update.setBounds(150, 290, 80, 23);
 
-        jButton4.setBackground(new java.awt.Color(97, 212, 195));
-        jButton4.setText("Delete");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        delete.setBackground(new java.awt.Color(97, 212, 195));
+        delete.setText("Delete");
+        delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                deleteActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(240, 290, 70, 23);
+        jPanel1.add(delete);
+        delete.setBounds(240, 290, 70, 23);
 
         buttonGroup1.add(jrbtable);
         jrbtable.setForeground(new java.awt.Color(255, 255, 255));
@@ -146,15 +146,15 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.add(jrbregionwise);
         jrbregionwise.setBounds(50, 430, 170, 23);
 
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("View");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        view.setBackground(new java.awt.Color(97, 212, 195));
+        view.setText("View");
+        view.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                viewActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(200, 380, 80, 23);
+        jPanel1.add(view);
+        view.setBounds(200, 380, 80, 23);
 
         jcustable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -168,27 +168,27 @@ public class customer_management extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jcustable);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(520, 20, 366, 402);
+        jScrollPane1.setBounds(520, 20, 440, 402);
 
-        jButton6.setBackground(new java.awt.Color(97, 212, 195));
-        jButton6.setText("Go to Billings");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        gotobillings.setBackground(new java.awt.Color(97, 212, 195));
+        gotobillings.setText("Go to Billings");
+        gotobillings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                gotobillingsActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6);
-        jButton6.setBounds(400, 290, 110, 23);
+        jPanel1.add(gotobillings);
+        gotobillings.setBounds(400, 290, 110, 23);
 
-        jButton5.setBackground(new java.awt.Color(97, 212, 195));
-        jButton5.setText("Back");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(97, 212, 195));
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(320, 290, 70, 23);
+        jPanel1.add(back);
+        back.setBounds(320, 290, 70, 23);
 
         jtfcusaddress.setColumns(20);
         jtfcusaddress.setRows(5);
@@ -232,7 +232,7 @@ public class customer_management extends javax.swing.JFrame {
         jLabel1.setBounds(10, 20, 120, 24);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 910, 460);
+        jPanel1.setBounds(0, 0, 970, 460);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -241,7 +241,7 @@ public class customer_management extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcomboregionActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
 try {
             Class.forName("java.sql.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
@@ -282,9 +282,9 @@ try {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());  
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_updateActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
  try
         {
             Class.forName("java.sql.Driver");
@@ -302,14 +302,14 @@ try {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_deleteActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
 new mahadev_menu_page().setVisible(true);
         dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewActionPerformed
         if(jrbtable.isSelected())
         {
             try{
@@ -433,9 +433,9 @@ new mahadev_menu_page().setVisible(true);
                         }
            }
                
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_viewActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void addcustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcustomerActionPerformed
         try 
         {
             Class.forName("java.sql.Driver");
@@ -462,12 +462,12 @@ new mahadev_menu_page().setVisible(true);
         {
             
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_addcustomerActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void gotobillingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gotobillingsActionPerformed
 new bills().setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_gotobillingsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -505,13 +505,11 @@ new bills().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addcustomer;
+    private javax.swing.JButton back;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton delete;
+    private javax.swing.JButton gotobillings;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -530,5 +528,7 @@ new bills().setVisible(true);
     private javax.swing.JTextField jtfcusname;
     private javax.swing.JTextField jtfcusphone;
     private javax.swing.JTextField jtfid;
+    private javax.swing.JButton update;
+    private javax.swing.JButton view;
     // End of variables declaration//GEN-END:variables
 }

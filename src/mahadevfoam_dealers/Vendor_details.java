@@ -36,13 +36,13 @@ public class Vendor_details extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        view = new javax.swing.JButton();
+        back = new javax.swing.JButton();
+        update = new javax.swing.JButton();
+        addealer = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton4 = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
         jtfadd = new javax.swing.JTextField();
         jtincst1 = new javax.swing.JTextField();
         jtingst1 = new javax.swing.JTextField();
@@ -66,36 +66,36 @@ public class Vendor_details extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("View");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        view.setBackground(new java.awt.Color(97, 212, 195));
+        view.setText("View");
+        view.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                viewActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(97, 212, 195));
-        jButton7.setText("Back");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(97, 212, 195));
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(97, 212, 195));
-        jButton8.setText("Dealer update");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        update.setBackground(new java.awt.Color(97, 212, 195));
+        update.setText("Dealer update");
+        update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                updateActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Add Dealer");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        addealer.setBackground(new java.awt.Color(97, 212, 195));
+        addealer.setText("Add Dealer");
+        addealer.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        addealer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                addealerActionPerformed(evt);
             }
         });
 
@@ -109,11 +109,11 @@ public class Vendor_details extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton4.setBackground(new java.awt.Color(97, 212, 195));
-        jButton4.setText("Delete");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        delete.setBackground(new java.awt.Color(97, 212, 195));
+        delete.setText("Delete");
+        delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                deleteActionPerformed(evt);
             }
         });
 
@@ -148,15 +148,15 @@ public class Vendor_details extends javax.swing.JFrame {
                         .addGap(0, 2, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton2)
+                                .addComponent(addealer)
                                 .addGap(5, 5, 5)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(update, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton7)
+                                .addComponent(back)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1))
+                                .addComponent(view))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -229,11 +229,11 @@ public class Vendor_details extends javax.swing.JFrame {
                             .addComponent(jLabel16))
                         .addGap(17, 17, 17)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton7)
-                            .addComponent(jButton8)
-                            .addComponent(jButton2)
-                            .addComponent(jButton4))))
+                            .addComponent(view)
+                            .addComponent(back)
+                            .addComponent(update)
+                            .addComponent(addealer)
+                            .addComponent(delete))))
                 .addGap(29, 29, 29))
         );
 
@@ -243,7 +243,7 @@ public class Vendor_details extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void addealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addealerActionPerformed
         try {
             Class.forName("java.sql.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
@@ -274,14 +274,14 @@ public class Vendor_details extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_addealerActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        new Dealer_Portal().setVisible(true);
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new mahadev_menu_page().setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         try {
             Class.forName("java.sql.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
@@ -306,9 +306,9 @@ public class Vendor_details extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_updateActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         try
         {
             Class.forName("java.sql.Driver");
@@ -327,9 +327,9 @@ public class Vendor_details extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_deleteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewActionPerformed
          try{
                     DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
 
@@ -361,7 +361,7 @@ public class Vendor_details extends javax.swing.JFrame {
                 }
 
                     
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_viewActionPerformed
 
     /**
      * @param args the command line arguments
@@ -398,11 +398,9 @@ public class Vendor_details extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton addealer;
+    private javax.swing.JButton back;
+    private javax.swing.JButton delete;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -420,5 +418,7 @@ public class Vendor_details extends javax.swing.JFrame {
     private javax.swing.JTextField jtfadd;
     private javax.swing.JTextField jtincst1;
     private javax.swing.JTextField jtingst1;
+    private javax.swing.JButton update;
+    private javax.swing.JButton view;
     // End of variables declaration//GEN-END:variables
 }

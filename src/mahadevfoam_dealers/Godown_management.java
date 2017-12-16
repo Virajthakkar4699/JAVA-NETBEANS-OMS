@@ -37,13 +37,14 @@ public class Godown_management extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        close = new javax.swing.JButton();
+        addgodown = new javax.swing.JButton();
         jtfgod = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Godown management");
@@ -66,25 +67,25 @@ public class Godown_management extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(240, 180, 140, 140);
 
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("Close");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        close.setBackground(new java.awt.Color(97, 212, 195));
+        close.setText("Close");
+        close.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                closeActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(80, 250, 120, 30);
+        jPanel1.add(close);
+        close.setBounds(80, 230, 120, 30);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Add Godown");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        addgodown.setBackground(new java.awt.Color(97, 212, 195));
+        addgodown.setText("Add Godown");
+        addgodown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                addgodownActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(80, 190, 120, 30);
+        jPanel1.add(addgodown);
+        addgodown.setBounds(80, 190, 120, 30);
         jPanel1.add(jtfgod);
         jtfgod.setBounds(240, 120, 140, 30);
 
@@ -110,17 +111,27 @@ public class Godown_management extends javax.swing.JFrame {
         jPanel1.add(jSeparator7);
         jSeparator7.setBounds(80, 90, 270, 2);
 
+        back.setBackground(new java.awt.Color(97, 212, 195));
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        jPanel1.add(back);
+        back.setBounds(80, 270, 120, 30);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, -10, 470, 350);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeActionPerformed
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_closeActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void addgodownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addgodownActionPerformed
         DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
         try 
         {
@@ -156,7 +167,12 @@ public class Godown_management extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_addgodownActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new mahadev_menu_page().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,8 +210,9 @@ public class Godown_management extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton addgodown;
+    private javax.swing.JButton back;
+    private javax.swing.JButton close;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

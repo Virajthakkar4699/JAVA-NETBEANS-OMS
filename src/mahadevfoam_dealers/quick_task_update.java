@@ -72,7 +72,7 @@ public class quick_task_update extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        add = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
         jtftaskid = new javax.swing.JTextField();
@@ -109,15 +109,15 @@ public class quick_task_update extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(250, 380, 80, 23);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("ADD");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        add.setBackground(new java.awt.Color(97, 212, 195));
+        add.setText("ADD");
+        add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                addActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(80, 380, 80, 23);
+        jPanel1.add(add);
+        add.setBounds(80, 380, 80, 23);
         jPanel1.add(jTextField1);
         jTextField1.setBounds(10, 330, 470, 29);
 
@@ -219,7 +219,7 @@ public class quick_task_update extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
       
         try
         {
@@ -252,7 +252,7 @@ public class quick_task_update extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
           
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_addActionPerformed
 
     private void jCheckBox1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBox1StateChanged
         try 
@@ -327,8 +327,8 @@ public class quick_task_update extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton add;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;

@@ -42,10 +42,10 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jdealergrptable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        viewallbutton = new javax.swing.JButton();
+        viewall = new javax.swing.JButton();
         searchbutton = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
+        addgroup = new javax.swing.JButton();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
 
@@ -92,14 +92,14 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
         jLabel2.setText("Dealer Group Update");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 72, -1, 41));
 
-        viewallbutton.setBackground(new java.awt.Color(97, 212, 195));
-        viewallbutton.setText("View All");
-        viewallbutton.addActionListener(new java.awt.event.ActionListener() {
+        viewall.setBackground(new java.awt.Color(97, 212, 195));
+        viewall.setText("View All");
+        viewall.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewallbuttonActionPerformed(evt);
+                viewallActionPerformed(evt);
             }
         });
-        jPanel1.add(viewallbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 254, 154, 36));
+        jPanel1.add(viewall, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 254, 154, 36));
 
         searchbutton.setBackground(new java.awt.Color(97, 212, 195));
         searchbutton.setText("Search");
@@ -110,23 +110,23 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
         });
         jPanel1.add(searchbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 254, 105, 36));
 
-        jButton3.setBackground(new java.awt.Color(97, 212, 195));
-        jButton3.setText("Back");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(97, 212, 195));
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 202, 105, 34));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 202, 105, 34));
 
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("Add Dealer Group");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addgroup.setBackground(new java.awt.Color(97, 212, 195));
+        addgroup.setText("Add Dealer Group");
+        addgroup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addgroupActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 202, 154, 34));
+        jPanel1.add(addgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 202, 154, 34));
 
         jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 119, 270, -1));
@@ -142,12 +142,12 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         new Dealer_Portal().setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addgroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addgroupActionPerformed
         try
        { 
          Class.forName("java.sql.Driver");
@@ -165,9 +165,9 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
        {
            JOptionPane.showMessageDialog(this, e.getMessage());
        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addgroupActionPerformed
 
-    private void viewallbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewallbuttonActionPerformed
+    private void viewallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewallActionPerformed
         try{
             DefaultTableModel model=(DefaultTableModel)jdealergrptable.getModel();
 
@@ -197,7 +197,7 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, "Database Connection Error.....!");
         }
-    }//GEN-LAST:event_viewallbuttonActionPerformed
+    }//GEN-LAST:event_viewallActionPerformed
 
     private void searchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttonActionPerformed
         try {
@@ -266,8 +266,8 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton addgroup;
+    private javax.swing.JButton back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -279,6 +279,6 @@ public class Add_dealer_group_form extends javax.swing.JFrame {
     private javax.swing.JTextField jTfid;
     private javax.swing.JTable jdealergrptable;
     private javax.swing.JButton searchbutton;
-    private javax.swing.JButton viewallbutton;
+    private javax.swing.JButton viewall;
     // End of variables declaration//GEN-END:variables
 }

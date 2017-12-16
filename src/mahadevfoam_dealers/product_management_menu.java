@@ -54,13 +54,13 @@ public class product_management_menu extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jSeparator7 = new javax.swing.JSeparator();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        showproduct = new javax.swing.JButton();
+        showcompany = new javax.swing.JButton();
         jSeparator8 = new javax.swing.JSeparator();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        add_company_btn = new javax.swing.JButton();
+        addproduct = new javax.swing.JButton();
+        back = new javax.swing.JButton();
+        managegodown = new javax.swing.JButton();
+        addcompany = new javax.swing.JButton();
         c_name_input = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         c_id_input = new javax.swing.JTextField();
@@ -189,69 +189,69 @@ public class product_management_menu extends javax.swing.JFrame {
         jPanel1.add(jSeparator7);
         jSeparator7.setBounds(480, 60, 270, 2);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Show Products");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        showproduct.setBackground(new java.awt.Color(97, 212, 195));
+        showproduct.setText("Show Products");
+        showproduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                showproductActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(290, 80, 120, 23);
+        jPanel1.add(showproduct);
+        showproduct.setBounds(290, 80, 120, 23);
 
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("Show Companies");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        showcompany.setBackground(new java.awt.Color(97, 212, 195));
+        showcompany.setText("Show Companies");
+        showcompany.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                showcompanyActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(140, 80, 150, 23);
+        jPanel1.add(showcompany);
+        showcompany.setBounds(140, 80, 150, 23);
 
         jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator8);
         jSeparator8.setBounds(70, 60, 270, 2);
 
-        jButton5.setBackground(new java.awt.Color(97, 212, 195));
-        jButton5.setText("Add Product");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        addproduct.setBackground(new java.awt.Color(97, 212, 195));
+        addproduct.setText("Add Product");
+        addproduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                addproductActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(450, 370, 320, 23);
+        jPanel1.add(addproduct);
+        addproduct.setBounds(450, 370, 320, 23);
 
-        jButton4.setBackground(new java.awt.Color(97, 212, 195));
-        jButton4.setText("Back");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(97, 212, 195));
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(450, 400, 320, 23);
+        jPanel1.add(back);
+        back.setBounds(450, 400, 320, 23);
 
-        jButton6.setBackground(new java.awt.Color(97, 212, 195));
-        jButton6.setText("Manage Godown");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        managegodown.setBackground(new java.awt.Color(97, 212, 195));
+        managegodown.setText("Manage Godown");
+        managegodown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                managegodownActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6);
-        jButton6.setBounds(10, 80, 130, 23);
+        jPanel1.add(managegodown);
+        managegodown.setBounds(10, 80, 130, 23);
 
-        add_company_btn.setBackground(new java.awt.Color(97, 212, 195));
-        add_company_btn.setText("Add Company");
-        add_company_btn.addActionListener(new java.awt.event.ActionListener() {
+        addcompany.setBackground(new java.awt.Color(97, 212, 195));
+        addcompany.setText("Add Company");
+        addcompany.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                add_company_btnActionPerformed(evt);
+                addcompanyActionPerformed(evt);
             }
         });
-        jPanel1.add(add_company_btn);
-        add_company_btn.setBounds(440, 160, 140, 23);
+        jPanel1.add(addcompany);
+        addcompany.setBounds(440, 160, 140, 23);
         jPanel1.add(c_name_input);
         c_name_input.setBounds(440, 120, 132, 30);
 
@@ -279,7 +279,7 @@ public class product_management_menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void add_company_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_company_btnActionPerformed
+    private void addcompanyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcompanyActionPerformed
         try
        { 
          Class.forName("java.sql.Driver");
@@ -300,9 +300,9 @@ public class product_management_menu extends javax.swing.JFrame {
        {
            JOptionPane.showMessageDialog(this, e.getMessage());
        }
-    }//GEN-LAST:event_add_company_btnActionPerformed
+    }//GEN-LAST:event_addcompanyActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void showcompanyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showcompanyActionPerformed
         try{
             DefaultTableModel model=(DefaultTableModel)jcomp_table.getModel();
 
@@ -332,9 +332,9 @@ public class product_management_menu extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, "Database Connection Error.....!");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_showcompanyActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void showproductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showproductActionPerformed
          try{
             DefaultTableModel model=(DefaultTableModel)jprod_table1.getModel();
 
@@ -364,14 +364,14 @@ public class product_management_menu extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, "Database Connection Error.....!");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_showproductActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
 new mahadev_menu_page().setVisible(true);
 dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void addproductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addproductActionPerformed
         try 
         {
         Class.forName("java.sql.Driver");
@@ -403,7 +403,7 @@ dispose();
         {
            JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_addproductActionPerformed
 
     private void jCombocompanyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCombocompanyActionPerformed
 
@@ -430,9 +430,9 @@ dispose();
             }
     }//GEN-LAST:event_jCombocompanyFocusGained
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void managegodownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managegodownActionPerformed
         new Godown_management().setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_managegodownActionPerformed
 
     private void c_id_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_id_inputActionPerformed
         // TODO add your handling code here:
@@ -474,14 +474,11 @@ dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton add_company_btn;
+    private javax.swing.JButton addcompany;
+    private javax.swing.JButton addproduct;
+    private javax.swing.JButton back;
     private javax.swing.JTextField c_id_input;
     private javax.swing.JTextField c_name_input;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jCombocompany;
     private javax.swing.JLabel jLabel1;
@@ -505,5 +502,8 @@ dispose();
     private javax.swing.JTable jprod_table1;
     private javax.swing.JTextField jtfprice;
     private javax.swing.JTextField jtfprice_purchased;
+    private javax.swing.JButton managegodown;
+    private javax.swing.JButton showcompany;
+    private javax.swing.JButton showproduct;
     // End of variables declaration//GEN-END:variables
 }

@@ -69,7 +69,7 @@ public class Dealer_Portal extends javax.swing.JFrame {
         jComboBoxregion = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
         jCombodealergroup = new javax.swing.JComboBox();
-        jButton2 = new javax.swing.JButton();
+        opendatabase = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
@@ -109,10 +109,10 @@ public class Dealer_Portal extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("OPEN DATABSE");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        opendatabase.setText("OPEN DATABSE");
+        opendatabase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                opendatabaseActionPerformed(evt);
             }
         });
 
@@ -137,7 +137,7 @@ public class Dealer_Portal extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(106, 106, 106)
-                        .addComponent(jButton2))
+                        .addComponent(opendatabase))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(124, 124, 124)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -157,7 +157,7 @@ public class Dealer_Portal extends javax.swing.JFrame {
                     .addComponent(jComboBoxregion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(opendatabase)
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
@@ -273,36 +273,12 @@ public class Dealer_Portal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        /*   try 
-        {
-            Class.forName("java.sql.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
-            Statement stmt=conn.createStatement();
-            String dealer_group=jCombodealergroup.getSelectedItem().toString();
-            String dealer_region=jComboBoxregion.getSelectedItem().toString();
-
-            String sql="select * from dealer_details where deal_group='"+dealer_group+"' and deal_region='"+dealer_region+"';";
-
-            ResultSet rs=stmt.executeQuery(sql);
-            
-            while(rs.next()) 
-         {         
-            new dealer_list_view_window().setVisible(true);
-         }
-            
-            
-            
-        } 
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }*/
+    private void opendatabaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opendatabaseActionPerformed
         String group=jCombodealergroup.getSelectedItem().toString();
         String region=jComboBoxregion.getSelectedItem().toString();
-        
+        // below line will pass the variable value to the naother form--> constructor
         new dealer_list_view_window(group,region).setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_opendatabaseActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         new Vendor_details().setVisible(true);
@@ -347,7 +323,6 @@ public class Dealer_Portal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -362,5 +337,6 @@ public class Dealer_Portal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton opendatabase;
     // End of variables declaration//GEN-END:variables
 }

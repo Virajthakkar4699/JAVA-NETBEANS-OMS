@@ -37,9 +37,9 @@ public class payments1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
+        update = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        show = new javax.swing.JButton();
         jtfbalance = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -74,15 +74,15 @@ public class payments1 extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(290, 130, 315, 198);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Update");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        update.setBackground(new java.awt.Color(97, 212, 195));
+        update.setText("Update");
+        update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                updateActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(40, 320, 116, 23);
+        jPanel1.add(update);
+        update.setBounds(40, 320, 116, 23);
 
         jButton4.setBackground(new java.awt.Color(97, 212, 195));
         jButton4.setText("Back");
@@ -94,15 +94,15 @@ public class payments1 extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(170, 320, 101, 23);
 
-        jButton3.setBackground(new java.awt.Color(97, 212, 195));
-        jButton3.setText("Show outstandings");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        show.setBackground(new java.awt.Color(97, 212, 195));
+        show.setText("Show outstandings");
+        show.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                showActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(40, 290, 230, 23);
+        jPanel1.add(show);
+        show.setBounds(40, 290, 230, 23);
 
         jtfbalance.setEditable(false);
         jPanel1.add(jtfbalance);
@@ -217,7 +217,7 @@ public class payments1 extends javax.swing.JFrame {
                 jtfbalance.setText(""+balanceamt);      
     }//GEN-LAST:event_jtfrcvFocusLost
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
                 
         try {
                 Class.forName("java.sql.Driver");
@@ -254,9 +254,9 @@ public class payments1 extends javax.swing.JFrame {
         }
                
                 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_updateActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void showActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
 try{
@@ -307,7 +307,7 @@ try{
         JOptionPane.showMessageDialog(this, "Database Connection Error.....!"); 
 }           
 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_showActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         new mahadev_menu_page().setVisible(true);
@@ -351,8 +351,6 @@ try{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox categorybox;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -368,5 +366,7 @@ try{
     private javax.swing.JTextField jtfinvoiceid;
     private javax.swing.JTextField jtfnet;
     private javax.swing.JTextField jtfrcv;
+    private javax.swing.JButton show;
+    private javax.swing.JButton update;
     // End of variables declaration//GEN-END:variables
 }

@@ -184,7 +184,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="addtostock">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c3" green="d4" red="61" type="rgb"/>
@@ -192,7 +192,7 @@
             <Property name="text" type="java.lang.String" value="Add To Stock"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addtostockActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -506,15 +506,15 @@
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="11" rowCount="0">
-                    <Column editable="true" title="Company" type="java.lang.Object"/>
+                    <Column editable="true" title="Comp." type="java.lang.Object"/>
                     <Column editable="true" title="Product" type="java.lang.Object"/>
-                    <Column editable="true" title="Length" type="java.lang.Object"/>
-                    <Column editable="true" title="Width" type="java.lang.Object"/>
-                    <Column editable="true" title="Height (in mm)" type="java.lang.Object"/>
+                    <Column editable="true" title="L" type="java.lang.Object"/>
+                    <Column editable="true" title="W" type="java.lang.Object"/>
+                    <Column editable="true" title="H (mm)" type="java.lang.Object"/>
                     <Column editable="true" title="Purchase" type="java.lang.Object"/>
                     <Column editable="true" title="MRP" type="java.lang.Object"/>
-                    <Column editable="true" title="Quantity" type="java.lang.Object"/>
-                    <Column editable="true" title="Net Value" type="java.lang.Object"/>
+                    <Column editable="true" title="Quant." type="java.lang.Object"/>
+                    <Column editable="true" title="Net" type="java.lang.Object"/>
                     <Column editable="true" title="UPI" type="java.lang.Object"/>
                     <Column editable="true" title="Godown" type="java.lang.Object"/>
                   </Table>
@@ -604,7 +604,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Customer Phone:-"/>
+            <Property name="text" type="java.lang.String" value="vendor Phone:-"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -631,7 +631,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Customer Address:-"/>
+            <Property name="text" type="java.lang.String" value="Vendor Address:-"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -644,7 +644,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Customer Name:-"/>
+            <Property name="text" type="java.lang.String" value="Vendor Name:-"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -732,7 +732,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Customer Id:-"/>
+            <Property name="text" type="java.lang.String" value="Vendor Id:-"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

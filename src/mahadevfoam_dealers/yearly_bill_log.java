@@ -36,7 +36,7 @@ public class yearly_bill_log extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        showlog = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtablelog = new javax.swing.JTable();
         jComboBox1 = new javax.swing.JComboBox();
@@ -59,15 +59,15 @@ public class yearly_bill_log extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(840, 380, 70, 23);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Show Log");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        showlog.setBackground(new java.awt.Color(97, 212, 195));
+        showlog.setText("Show log");
+        showlog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                showlogActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(150, 10, 100, 23);
+        jPanel1.add(showlog);
+        showlog.setBounds(150, 10, 100, 23);
 
         jtablelog.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,7 +97,7 @@ public class yearly_bill_log extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void showlogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showlogActionPerformed
         try 
         {
           Class.forName("java.sql.Driver");
@@ -154,7 +154,7 @@ public class yearly_bill_log extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_showlogActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,10 +193,10 @@ public class yearly_bill_log extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jtablelog;
+    private javax.swing.JButton showlog;
     // End of variables declaration//GEN-END:variables
 }

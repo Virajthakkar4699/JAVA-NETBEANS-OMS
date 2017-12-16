@@ -62,10 +62,10 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
+        update = new javax.swing.JButton();
+        adddealer = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
         jtingst = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jtincst = new javax.swing.JTextField();
@@ -103,46 +103,46 @@ public class dealer_details_portal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(36, 47, 65));
         jPanel1.setLayout(null);
 
-        jButton5.setBackground(new java.awt.Color(97, 212, 195));
-        jButton5.setText("Back");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(97, 212, 195));
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(380, 460, 90, 23);
+        jPanel1.add(back);
+        back.setBounds(380, 460, 90, 23);
 
-        jButton6.setBackground(new java.awt.Color(97, 212, 195));
-        jButton6.setText("Dealer update");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        update.setBackground(new java.awt.Color(97, 212, 195));
+        update.setText("Dealer update");
+        update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                updateActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6);
-        jButton6.setBounds(250, 460, 120, 23);
+        jPanel1.add(update);
+        update.setBounds(250, 460, 120, 23);
 
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("Add Dealer");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        adddealer.setBackground(new java.awt.Color(97, 212, 195));
+        adddealer.setText("Add Dealer");
+        adddealer.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        adddealer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                adddealerActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(30, 460, 120, 23);
+        jPanel1.add(adddealer);
+        adddealer.setBounds(30, 460, 120, 23);
 
-        jButton3.setBackground(new java.awt.Color(97, 212, 195));
-        jButton3.setText("Delete");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        delete.setBackground(new java.awt.Color(97, 212, 195));
+        delete.setText("Delete");
+        delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                deleteActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(160, 460, 80, 23);
+        jPanel1.add(delete);
+        delete.setBounds(160, 460, 80, 23);
         jPanel1.add(jtingst);
         jtingst.setBounds(200, 400, 280, 30);
 
@@ -212,7 +212,7 @@ public class dealer_details_portal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void adddealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adddealerActionPerformed
         try {
             Class.forName("java.sql.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
@@ -238,14 +238,14 @@ public class dealer_details_portal extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_adddealerActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         new Dealer_Portal().setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         try
         {
             Class.forName("java.sql.Driver");
@@ -264,9 +264,9 @@ public class dealer_details_portal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_deleteActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
 try {
             Class.forName("java.sql.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mahadev_foam","root","admin");
@@ -292,7 +292,7 @@ try {
         {
             JOptionPane.showMessageDialog(this, e.getMessage());  
         }
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_updateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,10 +329,9 @@ try {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton adddealer;
+    private javax.swing.JButton back;
+    private javax.swing.JButton delete;
     private javax.swing.JComboBox jComboBoxdealergroup;
     private javax.swing.JComboBox jComboBoxregion;
     private javax.swing.JLabel jLabel1;
@@ -355,5 +354,6 @@ try {
     private javax.swing.JTextField jid;
     private javax.swing.JTextField jtincst;
     private javax.swing.JTextField jtingst;
+    private javax.swing.JButton update;
     // End of variables declaration//GEN-END:variables
 }

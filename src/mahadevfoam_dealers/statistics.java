@@ -37,7 +37,7 @@ public class statistics extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        showrecords = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -46,7 +46,7 @@ public class statistics extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        showrecords1 = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTable7 = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -61,7 +61,7 @@ public class statistics extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
-        jButton3 = new javax.swing.JButton();
+        showrecords2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Statistics");
@@ -86,15 +86,15 @@ public class statistics extends javax.swing.JFrame {
         jPanel5.add(jButton4);
         jButton4.setBounds(290, 360, 170, 23);
 
-        jButton1.setBackground(new java.awt.Color(97, 212, 195));
-        jButton1.setText("Show Records");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        showrecords.setBackground(new java.awt.Color(97, 212, 195));
+        showrecords.setText("Show Records");
+        showrecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                showrecordsActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton1);
-        jButton1.setBounds(70, 360, 160, 23);
+        jPanel5.add(showrecords);
+        showrecords.setBounds(70, 360, 160, 23);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,15 +142,15 @@ public class statistics extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(36, 47, 65));
         jPanel4.setLayout(null);
 
-        jButton2.setBackground(new java.awt.Color(97, 212, 195));
-        jButton2.setText("Show Record");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        showrecords1.setBackground(new java.awt.Color(97, 212, 195));
+        showrecords1.setText("Show Record");
+        showrecords1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                showrecords1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton2);
-        jButton2.setBounds(200, 350, 110, 23);
+        jPanel4.add(showrecords1);
+        showrecords1.setBounds(200, 350, 110, 23);
 
         jTable7.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -241,15 +241,15 @@ public class statistics extends javax.swing.JFrame {
         jPanel6.add(jSeparator9);
         jSeparator9.setBounds(20, 72, 460, 10);
 
-        jButton3.setBackground(new java.awt.Color(97, 212, 195));
-        jButton3.setText("Show Records");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        showrecords2.setBackground(new java.awt.Color(97, 212, 195));
+        showrecords2.setText("Show Records");
+        showrecords2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                showrecords2ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton3);
-        jButton3.setBounds(180, 320, 150, 23);
+        jPanel6.add(showrecords2);
+        showrecords2.setBounds(180, 320, 150, 23);
 
         jPanel3.add(jPanel6);
         jPanel6.setBounds(0, 0, 520, 410);
@@ -262,7 +262,7 @@ public class statistics extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void showrecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showrecordsActionPerformed
 
              try{
                     DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
@@ -288,7 +288,6 @@ public class statistics extends javax.swing.JFrame {
                     {
                         model.addRow(new Object[]{rs.getString(1),rs.getString(2)});
                     }
-                    /////
                     String sql2="SELECT PNAME,(PRICE_72_36-PURCHASE_PRICE_72_36) FROM PRODUCT;";
 
                      ResultSet rs2=stmt.executeQuery(sql2);     
@@ -312,9 +311,9 @@ public class statistics extends javax.swing.JFrame {
                 {
                         JOptionPane.showMessageDialog(this, e.getMessage()); 
                 }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_showrecordsActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void showrecords1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showrecords1ActionPerformed
         //select product_name, sum(net_amt) from bills_retails group by product_name;  retail
         //select product_name, sum(net_amt) from bills_wholesale group by product_name;  whoolesale
         DefaultTableModel model1=(DefaultTableModel)jTable7.getModel();
@@ -360,10 +359,10 @@ try{
  {
         JOptionPane.showMessageDialog(this, e.getMessage()); 
  }    
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_showrecords1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // 
+    private void showrecords2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showrecords2ActionPerformed
+ 
         DefaultTableModel model1=(DefaultTableModel)jTable4.getModel();
         try 
         {
@@ -383,14 +382,14 @@ try{
     }
     while(rs.next())
     {
-        model1.addRow(new Object[]{rs.getString(1),rs.getString(2)});   
+        model1.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3)});   
     }
         }
         catch (Exception e) 
         {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_showrecords2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         new mahadev_menu_page().setVisible(true);
@@ -432,9 +431,6 @@ try{
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -461,5 +457,8 @@ try{
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
     private javax.swing.JTable jTable7;
+    private javax.swing.JButton showrecords;
+    private javax.swing.JButton showrecords1;
+    private javax.swing.JButton showrecords2;
     // End of variables declaration//GEN-END:variables
 }
