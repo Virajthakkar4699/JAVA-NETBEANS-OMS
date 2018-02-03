@@ -122,24 +122,28 @@ public class customer_management extends javax.swing.JFrame {
         jPanel1.add(delete);
         delete.setBounds(240, 290, 70, 23);
 
+        jrbtable.setBackground(new java.awt.Color(36, 47, 65));
         buttonGroup1.add(jrbtable);
         jrbtable.setForeground(new java.awt.Color(255, 255, 255));
         jrbtable.setText("View in Table");
         jPanel1.add(jrbtable);
         jrbtable.setBounds(50, 340, 120, 23);
 
+        jrbfield.setBackground(new java.awt.Color(36, 47, 65));
         buttonGroup1.add(jrbfield);
         jrbfield.setForeground(new java.awt.Color(255, 255, 255));
         jrbfield.setText("View in Fields");
         jPanel1.add(jrbfield);
         jrbfield.setBounds(50, 370, 120, 23);
 
+        jrbsearch.setBackground(new java.awt.Color(36, 47, 65));
         buttonGroup1.add(jrbsearch);
         jrbsearch.setForeground(new java.awt.Color(255, 255, 255));
         jrbsearch.setText("Search");
         jPanel1.add(jrbsearch);
         jrbsearch.setBounds(50, 400, 120, 23);
 
+        jrbregionwise.setBackground(new java.awt.Color(36, 47, 65));
         buttonGroup1.add(jrbregionwise);
         jrbregionwise.setForeground(new java.awt.Color(255, 255, 255));
         jrbregionwise.setText("View Region Wise");
