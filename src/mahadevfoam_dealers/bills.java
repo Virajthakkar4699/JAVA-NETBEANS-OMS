@@ -203,14 +203,14 @@ public class bills extends javax.swing.JFrame {
         jPanel1.add(jbt_save);
         jbt_save.setBounds(40, 620, 90, 23);
 
-        Jinvoicenumber.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JinvoicenumberActionPerformed(evt);
-            }
-        });
         Jinvoicenumber.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 JinvoicenumberFocusGained(evt);
+            }
+        });
+        Jinvoicenumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JinvoicenumberActionPerformed(evt);
             }
         });
         jPanel1.add(Jinvoicenumber);
